@@ -41,6 +41,14 @@ const Header = () => {
           </a>
         </nav>
 
+        {menuAberto && (
+          <div
+            className={`nav-overlay ${menuAberto ? 'aberto' : ''}`}
+            onClick={() => setMenuAberto(false)}
+            aria-hidden="true"
+          />
+        )}
+
         <button
           className="menu-toggle"
           onClick={() => setMenuAberto(!menuAberto)}
