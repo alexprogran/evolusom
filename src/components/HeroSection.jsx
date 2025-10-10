@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <section id="inicio" className="hero">
       <video autoPlay loop muted playsInline className="hero-video">
-        <source src="/hero_vd.MOV" type="video/mp4" />
+        <source src="/hero_vd.mp4" type="video/mp4" />
       </video>
       <div className="hero-overlay"></div>
       <img 
@@ -28,7 +28,7 @@ const HeroSection = () => {
           para o seu carro, casa ou empresa
         </h2>
         <p className="hero-description">
-          Soluções completas em películas, plotagens, som, elétrica e acessórios
+          Soluções completas em películas, multimídias, som, elétrica e acessórios
         </p>
         <button onClick={scrollParaServicos} className="hero-btn">
           Conheça nossos serviços
