@@ -1,0 +1,145 @@
+.servicos {
+  background-color: var(--preto);
+  position: relative;
+}
+
+.servicos-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.servicos-subtitle {
+  font-size: 1.1rem;
+  color: var(--cinza);
+  margin-top: 1rem;
+}
+
+.servicos-categoria {
+  margin-bottom: 5rem;
+}
+
+.servicos-categoria:last-child {
+  margin-bottom: 0;
+}
+
+.categoria-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(36, 160, 67, 0.3);
+}
+
+.categoria-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.categoria-icon {
+  color: var(--verde-evolusom);
+}
+
+.categoria-titulo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--branco);
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.servico-card {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+  border: 1px solid rgba(36, 160, 67, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.servico-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--verde-evolusom) 0%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.servico-card:hover {
+  border-color: var(--verde-evolusom);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(36, 160, 67, 0.3);
+}
+
+.servico-card:hover::before {
+  transform: scaleX(1);
+}
+
+.servico-icon {
+  color: var(--verde-evolusom);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.servico-card:hover .servico-icon {
+  transform: scale(1.1);
+}
+
+.servico-titulo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--branco);
+  margin-bottom: 1rem;
+}
+
+.servico-descricao {
+  font-size: 1rem;
+  color: var(--cinza);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.servico-btn {
+  background-color: transparent;
+  color: var(--verde-evolusom);
+  border: 2px solid var(--verde-evolusom);
+  padding: 0.7rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.servico-btn:hover {
+  background-color: var(--verde-evolusom);
+  color: var(--branco);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .categoria-titulo {
+    font-size: 1.4rem;
+  }
+
+  .categoria-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

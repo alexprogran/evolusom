@@ -1,0 +1,174 @@
+.contato {
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  position: relative;
+}
+
+.contato-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contato-subtitle {
+  font-size: 1.1rem;
+  color: var(--cinza);
+  margin-top: 1rem;
+}
+
+.contato-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(10, 10, 10, 0.8) 100%);
+  border: 1px solid rgba(36, 160, 67, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  border-color: var(--verde-evolusom);
+  transform: translateX(5px);
+}
+
+.info-icon {
+  color: var(--verde-evolusom);
+  margin-bottom: 0.8rem;
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--branco);
+  margin-bottom: 0.5rem;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: var(--cinza);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contato-link {
+  display: inline-block;
+  color: var(--verde-evolusom);
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.contato-link:hover {
+  text-decoration: underline;
+}
+
+.mapa {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(36, 160, 67, 0.2);
+}
+
+.contato-form-wrapper {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
+  border: 1px solid rgba(36, 160, 67, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-titulo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--branco);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--cinza);
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: rgba(26, 26, 26, 0.6);
+  border: 1px solid rgba(36, 160, 67, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--branco);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(209, 209, 209, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--verde-evolusom);
+  box-shadow: 0 0 0 3px rgba(36, 160, 67, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-btn {
+  background-color: var(--verde-evolusom);
+  color: var(--branco);
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.form-btn:hover {
+  background-color: #1f8a39;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(36, 160, 67, 0.4);
+}
+
+@media (max-width: 968px) {
+  .contato-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contato-form-wrapper {
+    padding: 2rem;
+  }
+}
