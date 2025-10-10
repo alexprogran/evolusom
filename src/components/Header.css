@@ -6,7 +6,7 @@
   height: 90px;
   border: none;
   background-color: transparent;
-  z-index: 999;
+  z-index: 50;
   /* box-shadow: 0 2px 10px rgba(36, 160, 67, 0.2); */
   animation: fadeInDown 1s ease forwards;
   display: flex;
@@ -35,8 +35,8 @@
 }
 
 .header-logo {
-  border: 1px solid red;
-   
+  border: none;
+  
   height: 3re;
   width: 150px;
   min-width: 150px;
@@ -142,7 +142,19 @@
   color: var(--verde-evolusom);
 }
 
-@media (max-width: 768px) {
+/* --- Mobile styles & animation --- */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
   .header-logo {
     height: 40px;
   }
@@ -154,26 +166,35 @@
   .nav {
     position: fixed;
     top: 80px;
-    right: 0;
-    width: 280px;
+    right: 0; /* fixa do lado direito */
+    width: 250px;
     height: calc(100vh - 80px);
-    background-color: rgba(0, 0, 0, 0.91);
+    /* fundo opaco */
+    background-color: #000000;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem;
     gap: 1.5rem;
-    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease-out;
     box-shadow: -2px 0 10px rgba(36, 160, 67, 0.2);
-    transform: translate3d(100%, 0, 0);
-    opacity: 0;
-    pointer-events: none;
-    will-change: transform, opacity;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-top: 1rem;
+    /* esconde por padrão no mobile */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    /* evita que a animação global faça o menu aparecer indevidamente */
     animation: none;
+    opacity: 1;
+    /* evita clique em área fora de vista */
+    pointer-events: none;
   }
 
   .nav-aberto {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
+    transform: translateX(0);
     pointer-events: auto;
+    animation: slideDown 0.3s ease-out;
   }
 
   .nav-link {
@@ -185,4 +206,105 @@
     justify-content: center;
     padding: 12px 18px;
   }
+}
+
+/* --- Desktop visibility rules --- */
+@media (min-width: 768px) {
+  .header-mobile-menu-button { display: none; }
+  .header-mobile-menu { display: none; }
+  .header-nav { display: flex; align-items: center; gap: 2rem; }
+  .header-actions { display: flex; }
+}
+
+/* --- Mobile visibility rules --- */
+@media (max-width: 767px) {
+  .header-nav { display: none; }
+  .header-actions { display: none; }
+}
+
+/* --- New header structures --- */
+.header-content {
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-nav-link {
+  background: transparent;
+  color: var(--branco);
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-nav-link:hover {
+  color: var(--verde-evolusom);
+  transform: translateX(4px);
+}
+
+.header-mobile-menu-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 60;
+  color: var(--branco);
+  background: transparent;
+  border-radius: 8px;
+  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.header-mobile-menu-button:hover {
+  color: var(--verde-evolusom);
+  background: rgba(36, 160, 67, 0.1);
+}
+
+.header-mobile-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  left: 0;
+  padding: 0 1rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+.header-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header-mobile-link {
+  text-align: left;
+  background: transparent;
+  color: var(--branco);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-mobile-link:hover {
+  color: var(--verde-evolusom);
+  transform: translateX(4px);
+}
+
+.header-mobile-whatsapp {
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(36, 160, 67, 1), rgba(36, 160, 67, 0.9));
+  box-shadow: 0 4px 15px rgba(36, 160, 67, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-mobile-whatsapp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 22px rgba(36, 160, 67, 0.45);
 }
