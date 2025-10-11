@@ -232,13 +232,28 @@
   .header-nav { display: none; }
   .header-actions { display: none; }
 }
+
 /* modo paisagem */
-@media (max-width: 932px) and (orientation: landscape) {
+ /* @media (max-width: 932px) and (orientation: landscape) {
   .header {    
     position: absolute;     
-    left: -13%;      
+    left: -13%;       
+    left: 50%;
+    transform: translateX(-50%);
 }
+}  */
+
+@media (max-width: 932px) and (orientation: landscape) {
+  .header-container {
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .nav {
+    justify-content: center !important;
+  }
 }
+
 
 /* --- New header structures --- */
 .header-content {
