@@ -49,7 +49,7 @@ const SobreSection = () => {
               <source src="/quem_somos.MOV" type="video/quicktime" />
               Seu navegador não suporta a tag de vídeo.
             </video>
-            </div>
+            </div> 
           </div>
         </div>
       </div>

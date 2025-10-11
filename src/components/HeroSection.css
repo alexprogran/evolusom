@@ -231,13 +231,15 @@
 /* ================================
    🔁 MOBILE HORIZONTAL (Landscape)
    ================================ */
-   @media (max-width: 932px) and (orientation: landscape) {
-    .hero {
+    @media (max-width: 932px) and (orientation: landscape) {
+      
+    .hero {     
       min-height: 100vh;
       padding: 60px 30px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     }
   
     .hero-video {

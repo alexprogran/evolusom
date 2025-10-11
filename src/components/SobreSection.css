@@ -3,6 +3,13 @@
   position: relative;
 }
 
+@media (max-width: 932px) and (orientation: landscape) {
+.container {
+  padding: 0 20px ;
+  border: 1px solid red;
+}
+}
+
 .sobre-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -125,7 +132,7 @@
   background: #000;
 }
 
-
+ 
 
 .video-placeholder {
   aspect-ratio: 16/9;

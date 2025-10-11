@@ -232,6 +232,13 @@
   .header-nav { display: none; }
   .header-actions { display: none; }
 }
+/* modo paisagem */
+@media (max-width: 932px) and (orientation: landscape) {
+  .header {    
+    position: absolute;     
+    left: -13%;      
+}
+}
 
 /* --- New header structures --- */
 .header-content {
@@ -293,3 +300,5 @@
   transform: scale(1.05);
   box-shadow: 0 6px 22px rgba(36, 160, 67, 0.45);
 }
+
+
