@@ -30,7 +30,7 @@ const Header = () => {
             {menuItems.map((item) => (
               <button
                 key={item.href}
-                className="header-nav-link"
+                className="header-nav-link" 
                 onClick={() => scrollToSection(item.href)}
                 aria-label={item.label}
               >

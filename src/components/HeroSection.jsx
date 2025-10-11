@@ -20,7 +20,7 @@ const HeroSection = () => {
         alt="EvoluSom Logo" 
         className="hero-logo" 
       />
-      <div className="hero-content">
+      <div className="hero-content"> 
         <h1 className="hero-title">
         Películas, multimídias e acessórios 
         </h1>
