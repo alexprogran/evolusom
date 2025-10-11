@@ -234,9 +234,9 @@
    
  @media (max-width: 932px) and (orientation: landscape) {
       
-    .hero {     
-      min-height: 100vh;
-      padding: 60px 30px;
+    .hero {
+      padding: 100px ;   
+      min-height: 100vh;     
       display: flex;
       flex-direction: column;
       justify-content: center;

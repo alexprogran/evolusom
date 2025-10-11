@@ -93,3 +93,14 @@ section {
     transform: translateY(0);
   }
 }
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Garante que o scroll horizontal nunca apareça */
+#root, .App {
+  overflow-x: hidden;
+}
