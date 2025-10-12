@@ -31,7 +31,6 @@
   color: var(--branco);
   margin-bottom: 1rem;
 }
-
 .title-underline {
   position: absolute;
   top: 100px;
@@ -249,12 +248,12 @@
   .sobre-paragrafo {
     font-size: 0.95rem;
     text-align: left;
-  }
+  } 
 
   /* .sobre-diferenciais {
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1.5rem; 
   } */
    .sobre-diferenciais {
     display: none;

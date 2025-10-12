@@ -3,8 +3,6 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import SobreSection from './components/SobreSection';
 import ServicosSection from './components/ServicosSection';
-import GaleriaVideos from './components/GaleriaVideos';
-import ProdutosSection from './components/ProdutosSection';
 import ContatoSection from './components/ContatoSection';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -31,9 +29,7 @@ function App() {
         <main>
           <HeroSection />
           <SobreSection />
-          <ServicosSection />
-          <GaleriaVideos />
-          <ProdutosSection />
+          <ServicosSection />      
           <ContatoSection />
         </main>
         <Footer />

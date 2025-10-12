@@ -5,24 +5,54 @@ const ServicosSection = () => {
   const servicosAutomotivos = [
     {
       icon: <Shield size={32} />,
-      titulo: "Películas e Plotagens",
-      descricao: "Proteção e personalização com películas de alta qualidade"
+      titulo: "Instalação de Película de Proteção",
+      descricao: "Proteção e personalização com películas de alta qualidade",
+      video: "/apresent_1.mp4"
     },
     {
-      icon: <Music size={32} />,
-      titulo: "Som Automotivo",
-      descricao: "Instalação de sistemas de som premium e multimídia"
+      icon: <Shield size={32} />,
+      titulo: "Instalação de Película de Proteção",
+      descricao: "Proteção e personalização com películas de alta qualidade",
+      video: "/apresent_1.mp4"
     },
     {
-      icon: <Zap size={32} />,
-      titulo: "Alarmes e Travas",
-      descricao: "Sistemas de segurança, alarmes e vidros elétricos"
+      icon: <Shield size={32} />,
+      titulo: "Instalação de Película de Proteção",
+      descricao: "Proteção e personalização com películas de alta qualidade",
+      video: "/apresent_1.mp4"
+    },{
+      icon: <Shield size={32} />,
+      titulo: "Instalação de Película de Proteção",
+      descricao: "Proteção e personalização com películas de alta qualidade",
+      video: "/apresent_1.mp4"
     },
     {
-      icon: <Wrench size={32} />,
-      titulo: "Acessórios",
-      descricao: "Variedade de acessórios automotivos de qualidade"
-    }
+      icon: <Shield size={32} />,
+      titulo: "Instalação de Película de Proteção",
+      descricao: "Proteção e personalização com películas de alta qualidade",
+      video: "/apresent_1.mp4"
+    },
+    {
+      icon: <Shield size={32} />,
+      titulo: "Instalação de Película de Proteção",
+      descricao: "Proteção e personalização com películas de alta qualidade",
+      video: "/apresent_1.mp4"
+    },
+    // {
+    //   icon: <Music size={32} />,
+    //   titulo: "Som Automotivo",
+    //   descricao: "Instalação de sistemas de som premium e multimídia"
+    // },
+    // {
+    //   icon: <Zap size={32} />,
+    //   titulo: "Alarmes e Travas",
+    //   descricao: "Sistemas de segurança, alarmes e vidros elétricos"
+    // },
+    // {
+    //   icon: <Wrench size={32} />,
+    //   titulo: "Acessórios",
+    //   descricao: "Variedade de acessórios automotivos de qualidade"
+    // }
   ];
 
   const servicosResidencial = [
@@ -38,17 +68,17 @@ const ServicosSection = () => {
     },
     {
       icon: <Zap size={32} />,
-      titulo: "Instalações Elétricas",
+      titulo: "Instalações Elétricas", 
       descricao: "Serviços elétricos especializados e seguros"
     }
   ];
 
-  return (
+  return ( 
     <section id="servicos" className="servicos">
       <div className="container">
         <div className="servicos-header">
           <h2 className="section-title">Nossos Serviços</h2>
-          <div className="title-underline"></div>
+          <div className="sobre-title-underline"></div>
           <p className="servicos-subtitle">
             Soluções completas para atender todas as suas necessidades
           </p>
@@ -59,12 +89,25 @@ const ServicosSection = () => {
             <Car size={36} className="categoria-icon" />
             <h3 className="categoria-titulo">Automotivo</h3>
           </div>
-          <div className="servicos-grid">
+          <div className="servicos-all-cards">
             {servicosAutomotivos.map((servico, index) => (
               <div key={index} className="servico-card">
                 <div className="servico-icon">{servico.icon}</div>
                 <h4 className="servico-titulo">{servico.titulo}</h4>
                 <p className="servico-descricao">{servico.descricao}</p>
+                {servico.video && (
+                  <div className="servico-video-container">
+                    <video 
+                      className="servico-video"
+                      autoPlay 
+                      loop 
+                      muted 
+                      playsInline
+                    >
+                      <source src={servico.video} type="video/mp4" />
+                    </video>
+                  </div>
+                )}
                 <button className="servico-btn">Saiba mais</button>
               </div>
             ))}

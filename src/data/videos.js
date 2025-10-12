@@ -4,8 +4,8 @@ export const videos = [
     titulo: "Instalação de Som Automotivo"
   },
   {
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    titulo: "Película de Proteção"
+    url: "/isntal_vidros.MOV",
+    titulo: "Instalação de Película de Proteção"
   },
   {
     url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
