@@ -6,11 +6,24 @@
 .servicos-header {
   text-align: center;
   margin-bottom: 4rem;
+  position: relative;
 }
 
-.servicos-subtitle {
+.sobre-title-underline {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: 4px;
+  background-color: var(--verde-evolusom);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.servicos-subtitle { 
   font-size: 1.1rem;
-  color: var(--cinza);
+  color: var(--cinza); 
   margin-top: 1rem;
 }
 
@@ -46,13 +59,16 @@
   color: var(--branco);
 }
 
-.servicos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+.servicos-all-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .servico-card {
+  width: calc(33.333% - 1rem);
+  height: auto;
   background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(10, 10, 10, 0.9) 100%);
   border: 1px solid rgba(36, 160, 67, 0.2);
   border-radius: 16px;
@@ -61,6 +77,27 @@
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+}
+
+.servico-video-container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.servico-card:hover .servico-video-container {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(36, 160, 67, 0.4);
 }
 
 .servico-card::before {
@@ -130,8 +167,16 @@
 }
 
 @media (max-width: 768px) {
-  .servicos-grid {
-    grid-template-columns: 1fr;
+  .servicos-all-cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .servico-card {
+    width: 100%;
   }
 
   .categoria-titulo {
@@ -141,5 +186,28 @@
   .categoria-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .sobre-title-underline {
+    width: 180px;
+    height: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-title-underline {
+    width: 150px;
+    height: 3px;
+  }
+
+  .servicos-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .sobre-title-underline {
+    width: 130px;
+    height: 2px;
   }
 }
