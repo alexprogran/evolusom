@@ -5,21 +5,21 @@ const ServicosSection = () => {
   const servicosAutomotivos = [
     {
       icon: <Shield size={32} />,
-      titulo: "Instalação de Película de Proteção",
+      titulo: "Instalação de Película",
       descricao: "Proteção e personalização com películas de alta qualidade",
-      video: "/apresent_1.mp4"
+      video: "/install_vidros.mp4"
     },
     {
       icon: <Shield size={32} />,
-      titulo: "Instalação de Película de Proteção",
+      titulo: "leds X Ulta Treme White",
       descricao: "Proteção e personalização com películas de alta qualidade",
-      video: "/apresent_1.mp4"
+      video: "/product_led1.mp4"
     },
     {
       icon: <Shield size={32} />,
-      titulo: "Instalação de Película de Proteção",
+      titulo: "Instalação de Multimídia",
       descricao: "Proteção e personalização com películas de alta qualidade",
-      video: "/apresent_1.mp4"
+      video: "/antes_depois_multimidia1.mp4"
     },{
       icon: <Shield size={32} />,
       titulo: "Instalação de Película de Proteção",
@@ -87,7 +87,7 @@ const ServicosSection = () => {
         <div className="servicos-categoria">
           <div className="categoria-header">
             <Car size={36} className="categoria-icon" />
-            <h3 className="categoria-titulo">Automotivo</h3>
+            <h3 className="categoria-titulo">Confira nossos serviços</h3>
           </div>
           <div className="servicos-all-cards">
             {servicosAutomotivos.map((servico, index) => (
@@ -96,16 +96,21 @@ const ServicosSection = () => {
                 <h4 className="servico-titulo">{servico.titulo}</h4>
                 <p className="servico-descricao">{servico.descricao}</p>
                 {servico.video && (
-                  <div className="servico-video-container">
-                    <video 
+                  <div className="servico-video-container">                    
+                    <video
                       className="servico-video"
-                      autoPlay 
-                      loop 
-                      muted 
+                      controls                     
+                      muted
                       playsInline
-                    >
+                      preload="metadata"
+                      onLoadedMetadata={(e) => {
+                        const video = e.target;
+                        video.currentTime = video.duration; // vai direto para o último frame
+                      }}
+                      >
                       <source src={servico.video} type="video/mp4" />
                     </video>
+
                   </div>
                 )}
                 <button className="servico-btn">Saiba mais</button>
@@ -122,7 +127,7 @@ const ServicosSection = () => {
             </div>
             <h3 className="categoria-titulo">Residencial / Empresarial</h3>
           </div>
-          <div className="servicos-grid">
+          <div className="servicos-all-cards">
             {servicosResidencial.map((servico, index) => (
               <div key={index} className="servico-card">
                 <div className="servico-icon">{servico.icon}</div>
