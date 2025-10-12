@@ -82,6 +82,14 @@
   font-weight: 300;
 }
 
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
 .hero-btn {
   display: inline-flex;
   align-items: center;  
@@ -91,16 +99,42 @@
   padding: 1rem 2.5rem; 
   font-size: 1.1rem;
   font-weight: 600;
+  border: 2px solid transparent;
   border-radius: 50px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(36, 160, 67, 0.3);
-  margin-top: 4.5rem;
+}
+
+.hero-btn-whatsapp {
+  display: inline-flex;
+  align-items: center;  
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--branco);
+  padding: 1rem 2.5rem; 
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid var(--branco);
+  border-radius: 50px;
+  transition: all 0.3s ease;
 }
 
 .hero-btn:hover {
   background-color: #1f8a39;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(36, 160, 67, 0.5);
+}
+
+.hero-btn-whatsapp:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .btn-icon {
@@ -204,23 +238,35 @@
   }
 
   .hero-description {
-    margin-top: 1rem;
+    width: 90%;
+    margin-top: -15rem;
     font-size: 1rem;    
     color: #ffffff;
   }
 
 
   .hero-btn {
+    display: flex;
+    justify-content: center;
    position: absolute;    
     width: 90%;
     top: 90%; 
+    left: 50%;
     transform: translateX(-50%);
     font-size: 1rem;  
   }
 
+  .hero-btn-whatsapp {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+
   .hero-logo {   
     position: absolute;
-    top: 25%;
+    top: 17%;
     left: 50%;
     transform: translateX(-50%);
     width: 330px;
@@ -241,7 +287,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
+    } 
   
     .hero-video {
       object-fit: cover;
