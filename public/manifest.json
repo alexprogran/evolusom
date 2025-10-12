@@ -1,0 +1,28 @@
+{
+  "name": "EvoluSom - Películas, Multimídias e Acessórios",
+  "short_name": "EvoluSom",
+  "description": "Soluções completas em películas, multimídias, som, elétrica e acessórios para seu carro, casa ou empresa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#24A043",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "automotive"],
+  "lang": "pt-BR",
+  "dir": "ltr"
+}
+

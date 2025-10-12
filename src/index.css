@@ -20,6 +20,12 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  
+  /* Suporte para área segura de dispositivos móveis (iOS notch/dynamic island) */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 a {
@@ -94,6 +100,14 @@ section {
   }
 }
 
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* Garante que o fundo seja preto em toda a área, incluindo safe-area */
+  background-color: var(--preto);
+}
+
 html, body {
   width: 100%;
   max-width: 100%;
@@ -103,4 +117,13 @@ html, body {
 /* Garante que o scroll horizontal nunca apareça */
 #root, .App {
   overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Suporte adicional para PWA em modo standalone */
+@media (display-mode: standalone) {
+  body {
+    /* Remove o padding superior quando em modo standalone para evitar espaço extra */
+    padding-top: 0;
+  }
 }
