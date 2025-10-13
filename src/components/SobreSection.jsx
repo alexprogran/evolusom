@@ -45,15 +45,32 @@ const SobreSection = () => {
           </div>
 
           <div className="sobre-video">
-            <div className="video-wrapper">
-            <video className="sobre-video-player" controls preload="metadata" playsInline>
-              <source src="/apresent_1.mp4" type="video/mp4" />             
-              Seu navegador não suporta a tag de vídeo.
-            </video>
+            <div className="video-wrapper">            
+              <video
+                className="servico-video"
+                controls
+                muted
+                playsInline
+                preload="metadata"
+                onLoadedMetadata={(e) => {
+                  const video = e.target;
+                  // Define o tempo desejado do frame (ex: 3 segundos ou 25% da duração)
+                  const tempoDesejado = Math.min(video.duration * 0.97, video.duration - 0.1);
+                  video.currentTime = tempoDesejado;
+
+                  // Quando o vídeo realmente chega naquele frame
+                  video.onseeked = () => {
+                    video.pause(); // garante que fica pausado
+                  };
+                }}
+                >
+                <source src="/apresent_1.mp4" type="video/mp4" />
+              </video>
+
             </div> 
           </div>
         </div>
-      </div>
+      </div> 
     </section>
   );
 };

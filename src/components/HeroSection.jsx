@@ -15,7 +15,7 @@ const HeroSection = () => {
         <source src="/hero_vd.mp4" type="video/mp4" />
       </video>
       <div className="hero-overlay"></div>
-      <img 
+      <img  
         src="/logo.png" 
         alt="EvoluSom Logo" 
         className="hero-logo" 

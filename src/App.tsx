@@ -3,6 +3,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import SobreSection from './components/SobreSection';
 import ServicosSection from './components/ServicosSection';
+import AvaliacaoSection from './components/AvaliacaoSection';
 import ContatoSection from './components/ContatoSection';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -18,7 +19,7 @@ function App() {
         />
         <meta
           name="keywords"
-          content="película automotiva, som automotivo, alarme automotivo, plotagem, instalação elétrica, acessórios automotivos"
+          content="película automotiva, som automotivo, alarme automotivo, plotagem, instalação elétrica, acessórios automotivos, avaliações clientes, melhores serviços automotivos"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -29,7 +30,8 @@ function App() {
         <main>
           <HeroSection />
           <SobreSection />
-          <ServicosSection />      
+          <ServicosSection />
+          <AvaliacaoSection />
           <ContatoSection />
         </main>
         <Footer />

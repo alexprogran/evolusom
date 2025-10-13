@@ -146,7 +146,7 @@
 } */
 .sobre-video-player {
   display: block;
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: contain;
   background: #000;

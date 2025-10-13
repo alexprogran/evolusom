@@ -1,4 +1,4 @@
-import { Car, Home, Shield, Music, Zap, Wrench, Building2 } from 'lucide-react';
+import { Home, Shield, Music, Zap, Building2, Monitor, ShoppingBag, Plug, Volume2, Lightbulb } from 'lucide-react';
 import './ServicosSection.css';
 
 const ServicosSection = () => {
@@ -6,53 +6,41 @@ const ServicosSection = () => {
     {
       icon: <Shield size={32} />,
       titulo: "Instalação de Película",
-      descricao: "Proteção e personalização com películas de alta qualidade",
-      video: "/install_vidros.mp4"
+      descricao: "Películas de alta qualidade",
+      video: "/aplic_pelicula2.mp4"
     },
+      // video: "/install_vidros.mp4"
+    
     {
-      icon: <Shield size={32} />,
+      icon: <Lightbulb size={32} />,
       titulo: "leds X Ulta Treme White",
-      descricao: "Proteção e personalização com películas de alta qualidade",
+      descricao: "Leds de alta qualidade para seu carro",
       video: "/product_led1.mp4"
     },
     {
-      icon: <Shield size={32} />,
+      icon: <Monitor size={32} />,
       titulo: "Instalação de Multimídia",
-      descricao: "Proteção e personalização com películas de alta qualidade",
+      descricao: "Os melhores sistemas de multimídia",
       video: "/antes_depois_multimidia1.mp4"
-    },{
-      icon: <Shield size={32} />,
-      titulo: "Instalação de Película de Proteção",
-      descricao: "Proteção e personalização com películas de alta qualidade",
-      video: "/apresent_1.mp4"
     },
     {
-      icon: <Shield size={32} />,
-      titulo: "Instalação de Película de Proteção",
-      descricao: "Proteção e personalização com películas de alta qualidade",
-      video: "/apresent_1.mp4"
+      icon: <ShoppingBag size={32} />,
+      titulo: "Som e acessórios",
+      descricao: "Confira nossa variedade de acessórios",
+      video: "/hero_vd.mp4"
     },
     {
-      icon: <Shield size={32} />,
-      titulo: "Instalação de Película de Proteção",
-      descricao: "Proteção e personalização com películas de alta qualidade",
-      video: "/apresent_1.mp4"
+      icon: <Zap size={32} />,
+      titulo: "Elétrica",
+      descricao: "Instalações elétricas especializadas",
+      video: "/install_eletric.mp4"
     },
-    // {
-    //   icon: <Music size={32} />,
-    //   titulo: "Som Automotivo",
-    //   descricao: "Instalação de sistemas de som premium e multimídia"
-    // },
-    // {
-    //   icon: <Zap size={32} />,
-    //   titulo: "Alarmes e Travas",
-    //   descricao: "Sistemas de segurança, alarmes e vidros elétricos"
-    // },
-    // {
-    //   icon: <Wrench size={32} />,
-    //   titulo: "Acessórios",
-    //   descricao: "Variedade de acessórios automotivos de qualidade"
-    // }
+    {
+      icon: <Volume2 size={32} />,
+      titulo: "Som",
+      descricao: "Instalações de som especializadas",
+      video: "/install_som.mp4"
+    },
   ];
 
   const servicosResidencial = [
@@ -84,11 +72,7 @@ const ServicosSection = () => {
           </p>
         </div>
 
-        <div className="servicos-categoria">
-          <div className="categoria-header">
-            <Car size={36} className="categoria-icon" />
-            <h3 className="categoria-titulo">Confira nossos serviços</h3>
-          </div>
+        <div className="servicos-categoria">          
           <div className="servicos-all-cards">
             {servicosAutomotivos.map((servico, index) => (
               <div key={index} className="servico-card">
@@ -97,7 +81,7 @@ const ServicosSection = () => {
                 <p className="servico-descricao">{servico.descricao}</p>
                 {servico.video && (
                   <div className="servico-video-container">                    
-                    <video
+                    {/* <video
                       className="servico-video"
                       controls                     
                       muted
@@ -109,11 +93,31 @@ const ServicosSection = () => {
                       }}
                       >
                       <source src={servico.video} type="video/mp4" />
-                    </video>
+                    </video> */}
+                    <video
+                    className="servico-video"
+                    controls
+                    muted
+                    playsInline
+                    preload="metadata"
+                    onLoadedMetadata={(e) => {
+                    const video = e.target;
+                    // Define o tempo desejado do frame (ex: 3 segundos ou 25% da duração)
+                    const tempoDesejado = Math.min(video.duration * 0.15, video.duration - 0.1);
+                    video.currentTime = tempoDesejado;
+
+                    // Quando o vídeo realmente chega naquele frame
+                    video.onseeked = () => {
+                      video.pause(); // garante que fica pausado
+                    };
+                    }}
+                    >
+  <source src={servico.video} type="video/mp4" />
+</video>
 
                   </div>
                 )}
-                <button className="servico-btn">Saiba mais</button>
+                <button className="servico-btn">Faça seu orçamento</button>
               </div>
             ))}
           </div>
@@ -133,7 +137,7 @@ const ServicosSection = () => {
                 <div className="servico-icon">{servico.icon}</div>
                 <h4 className="servico-titulo">{servico.titulo}</h4>
                 <p className="servico-descricao">{servico.descricao}</p>
-                <button className="servico-btn">Saiba mais</button>
+                <button className="servico-btn">Faça seu orçamento</button>
               </div>
             ))}
           </div>
