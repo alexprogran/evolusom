@@ -18,6 +18,17 @@
   gap: 1rem;
 }
 
+.footer-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
 .footer-titulo {
   font-size: 1.5rem;
   font-weight: 700;

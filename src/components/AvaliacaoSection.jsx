@@ -9,42 +9,42 @@ const AvaliacaoSection = () => {
   const avaliacoes = [
     {
       nome: "João Silva",
-      foto: "https://ui-avatars.com/api/?name=Joao+Silva&background=f97316&color=fff&size=80",
+      foto: "https://ui-avatars.com/api/?name=Joao+Silva&background=24A043&color=fff&size=80",
       avaliacao: 5,
       comentario: "Excelente atendimento! Instalaram película no meu carro com muita qualidade e profissionalismo. Super recomendo!",
       data: "Há 2 semanas"
     },
     {
       nome: "Maria Santos",
-      foto: "https://ui-avatars.com/api/?name=Maria+Santos&background=f97316&color=fff&size=80",
+      foto: "https://ui-avatars.com/api/?name=Maria+Santos&background=24A043&color=fff&size=80",
       avaliacao: 5,
       comentario: "Fizeram a instalação do som do meu carro. Ficou perfeito! Equipe atenciosa e preço justo. Voltarei com certeza.",
       data: "Há 1 mês"
     },
     {
       nome: "Carlos Oliveira",
-      foto: "https://ui-avatars.com/api/?name=Carlos+Oliveira&background=f97316&color=fff&size=80",
+      foto: "https://ui-avatars.com/api/?name=Carlos+Oliveira&background=24A043&color=fff&size=80",
       avaliacao: 5,
       comentario: "Melhor lugar para instalação de multimídia! Trabalho impecável e entrega no prazo. Muito satisfeito!",
       data: "Há 3 semanas"
     },
     {
       nome: "Ana Paula",
-      foto: "https://ui-avatars.com/api/?name=Ana+Paula&background=f97316&color=fff&size=80",
+      foto: "https://ui-avatars.com/api/?name=Ana+Paula&background=24A043&color=fff&size=80",
       avaliacao: 5,
       comentario: "Instalaram LEDs no meu carro e ficou incrível! Atendimento nota 10 e resultado surpreendente.",
       data: "Há 1 semana"
     },
     {
       nome: "Ricardo Souza",
-      foto: "https://ui-avatars.com/api/?name=Ricardo+Souza&background=f97316&color=fff&size=80",
+      foto: "https://ui-avatars.com/api/?name=Ricardo+Souza&background=24A043&color=fff&size=80",
       avaliacao: 5,
       comentario: "Serviço de elétrica automotiva excelente. Resolveram meu problema rapidamente. Recomendo demais!",
       data: "Há 2 meses"
     },
     {
       nome: "Fernanda Lima",
-      foto: "https://ui-avatars.com/api/?name=Fernanda+Lima&background=f97316&color=fff&size=80",
+      foto: "https://ui-avatars.com/api/?name=Fernanda+Lima&background=24A043&color=fff&size=80",
       avaliacao: 5,
       comentario: "Atendimento excepcional! Instalaram película residencial em minha casa. Ficou perfeito e diminuiu muito o calor.",
       data: "Há 1 mês"
@@ -84,8 +84,8 @@ const AvaliacaoSection = () => {
       <Star
         key={index}
         size={20}
-        fill={index < rating ? "#f97316" : "none"}
-        stroke={index < rating ? "#f97316" : "#d1d5db"}
+        fill={index < rating ? "#24A043" : "none"}
+        stroke={index < rating ? "#24A043" : "#d1d5db"}
       />
     ));
   };

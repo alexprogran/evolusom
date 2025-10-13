@@ -7,7 +7,7 @@
   text-align: center;
   margin-bottom: 4rem;
 }
-
+ 
 .contato-subtitle {
   font-size: 1.1rem;
   color: var(--cinza);
@@ -15,15 +15,14 @@
 }
 
 .contato-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .contato-info {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
@@ -33,11 +32,15 @@
   border-radius: 12px;
   padding: 1.5rem;
   transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .info-card:hover {
   border-color: var(--verde-evolusom);
-  transform: translateX(5px);
+  transform: translateY(-5px);
 }
 
 .info-icon {
@@ -46,14 +49,14 @@
 }
 
 .info-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--branco);
   margin-bottom: 0.5rem;
 }
 
 .info-card p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--cinza);
   line-height: 1.6;
   margin: 0;
@@ -72,10 +75,11 @@
 }
 
 .mapa {
-  margin-top: 1rem;
+  width: 100%;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(36, 160, 67, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .contato-form-wrapper {
@@ -163,12 +167,46 @@
 }
 
 @media (max-width: 968px) {
-  .contato-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  .contato-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .info-card {
+    padding: 1.2rem;
+  }
+
+  .info-card h3 {
+    font-size: 1rem;
+  }
+
+  .info-card p {
+    font-size: 0.9rem;
   }
 
   .contato-form-wrapper {
     padding: 2rem;
   }
+}
+
+@media (max-width: 640px) {
+  .contato-info {
+    grid-template-columns: 1fr;
+  }
+
+  .mapa iframe {
+    height: 300px;
+  }
+}
+
+.title-underline{
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 290px;
+  height: 4px;
+  background-color: var(--verde-evolusom);
+  margin: 0 auto;
+  border-radius: 2px;
 }

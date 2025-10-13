@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import './Footer.css';
+import logo from '/logo.png';
 
 const Footer = () => {
   const scrollParaSecao = (id) => {
@@ -14,7 +15,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-coluna">
-            <h3 className="footer-titulo">Evolu<span className="brand-s">S</span>om Equipadora</h3>
+            <img src={logo} alt="EvoluSom Equipadora" className="footer-logo" />
             <p className="footer-descricao">
               Excelência em películas, plotagens, som, elétrica e acessórios para automotivos,
               residências e empresas.
@@ -70,7 +71,7 @@ const Footer = () => {
             <ul className="footer-contatos">
               <li>
                 <MapPin size={18} />
-                <span>Rua Exemplo, 123<br />Centro - Cidade/UF</span>
+                <span>Tv. Getúlio Vargas, 05<br />Alto da Cruz - Camaçari/BA</span>
               </li>
               <li>
                 <Phone size={18} />
