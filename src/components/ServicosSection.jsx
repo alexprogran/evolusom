@@ -80,40 +80,16 @@ const ServicosSection = () => {
                 <h4 className="servico-titulo">{servico.titulo}</h4>
                 <p className="servico-descricao">{servico.descricao}</p>
                 {servico.video && (
-                  <div className="servico-video-container">                    
-                    {/* <video
+                  <div className="servico-video-container">                   
+                    <video
                       className="servico-video"
-                      controls                     
+                      controls
                       muted
                       playsInline
-                      preload="metadata"
-                      onLoadedMetadata={(e) => {
-                        const video = e.target;
-                        video.currentTime = video.duration; // vai direto para o último frame
-                      }}
+                      preload="metadata"                   
                       >
                       <source src={servico.video} type="video/mp4" />
-                    </video> */}
-                    <video
-                    className="servico-video"
-                    controls
-                    muted
-                    playsInline
-                    preload="metadata"
-                    onLoadedMetadata={(e) => {
-                    const video = e.target;
-                    // Define o tempo desejado do frame (ex: 3 segundos ou 25% da duração)
-                    const tempoDesejado = Math.min(video.duration * 0.15, video.duration - 0.1);
-                    video.currentTime = tempoDesejado;
-
-                    // Quando o vídeo realmente chega naquele frame
-                    video.onseeked = () => {
-                      video.pause(); // garante que fica pausado
-                    };
-                    }}
-                    >
-  <source src={servico.video} type="video/mp4" />
-</video>
+                    </video>
 
                   </div>
                 )}

@@ -52,17 +52,17 @@ const SobreSection = () => {
                 muted
                 playsInline
                 preload="metadata"
-                onLoadedMetadata={(e) => {
-                  const video = e.target;
-                  // Define o tempo desejado do frame (ex: 3 segundos ou 25% da duração)
-                  const tempoDesejado = Math.min(video.duration * 0.97, video.duration - 0.1);
-                  video.currentTime = tempoDesejado;
+                // onLoadedMetadata={(e) => {
+                //   const video = e.target;
+                //   // Define o tempo desejado do frame (ex: 3 segundos ou 25% da duração)
+                //   const tempoDesejado = Math.min(video.duration * 0.97, video.duration - 0.1);
+                //   video.currentTime = tempoDesejado;
 
-                  // Quando o vídeo realmente chega naquele frame
-                  video.onseeked = () => {
-                    video.pause(); // garante que fica pausado
-                  };
-                }}
+                //   // Quando o vídeo realmente chega naquele frame
+                //   video.onseeked = () => {
+                //     video.pause(); // garante que fica pausado
+                //   };
+                // }}
                 >
                 <source src="/apresent_1.mp4" type="video/mp4" />
               </video>
