@@ -19,7 +19,7 @@ const ContatoSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const mensagemWhatsApp = `Olá! Meu nome é ${formData.nome}.\nTelefone: ${formData.telefone}\n\nMensagem: ${formData.mensagem}`;
-    const url = `https://wa.me/5599999999999?text=${encodeURIComponent(mensagemWhatsApp)}`;
+    const url = `https://wa.me/557130405086?text=${encodeURIComponent(mensagemWhatsApp)}`;
     window.open(url, '_blank');
   };
 
@@ -45,9 +45,9 @@ const ContatoSection = () => {
             <div className="info-card">
               <Phone className="info-icon" size={24} />
               <h3>Telefone</h3>
-              <p>(99) 99999-9999</p>
+              <p>(71) 3040-5086</p>
               <a
-                href="https://wa.me/5599999999999"
+                href="https://wa.me/557130405086"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contato-link"
@@ -59,19 +59,19 @@ const ContatoSection = () => {
             <div className="info-card">
               <Mail className="info-icon" size={24} />
               <h3>E-mail</h3>
-              <p>contato@evolusom.com.br</p>
+              <p>evolusom.equip@hotmail.com</p>
             </div>
 
             <div className="info-card">
               <Instagram className="info-icon" size={24} />
               <h3>Instagram</h3>
               <a
-                href="https://instagram.com/evolusom"
+                href="https://www.instagram.com/evolusom.3m/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contato-link"
               >
-                @evolusom
+                @evolusom.3m
               </a>
             </div>
           </div>

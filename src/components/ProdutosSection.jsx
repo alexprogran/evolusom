@@ -37,7 +37,7 @@ const ProdutosSection = () => {
 
   const abrirWhatsApp = (produto) => {
     const mensagem = `Olá! Gostaria de solicitar um orçamento para: ${produto}`;
-    const url = `https://wa.me/5599999999999?text=${encodeURIComponent(mensagem)}`;
+    const url = `https://wa.me/557130405086?text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank');
   };
 

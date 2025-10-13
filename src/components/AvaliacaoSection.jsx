@@ -97,7 +97,7 @@ const AvaliacaoSection = () => {
           <h2 className="section-title">O que dizem nossos clientes</h2>
           <div className="avaliacoes-title-underline"></div>
           <p className="avaliacoes-subtitle">
-            Avaliações reais de clientes satisfeitos
+           A satisfação do nosso cliente é nossa prioridade
           </p>
         </div>
 

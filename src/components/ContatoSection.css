@@ -201,10 +201,10 @@
 
 .title-underline{
   position: absolute;
-  top: 130px;
+  top: 140px;
   left: 50%;
   transform: translateX(-50%);
-  width: 290px;
+  width: 360px;
   height: 4px;
   background-color: var(--verde-evolusom);
   margin: 0 auto;
