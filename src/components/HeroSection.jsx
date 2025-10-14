@@ -17,6 +17,7 @@ const HeroSection = () => {
       <div className="hero-overlay"></div>
       <img  
         src="/logo.png" 
+     
         alt="EvoluSom Logo" 
         className="hero-logo" 
       />

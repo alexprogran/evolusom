@@ -2,6 +2,12 @@ import { Home, Shield, Music, Zap, Building2, Monitor, ShoppingBag, Plug, Volume
 import './ServicosSection.css';
 
 const ServicosSection = () => {
+  const abrirWhatsApp = (servico) => {
+    const mensagem = `Olá! Gostaria de solicitar um orçamento para o serviço: ${servico}`;
+    const url = `https://wa.me/557130405086?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  };
+
   const servicosAutomotivos = [
     {
       icon: <Shield size={32} />,
@@ -93,7 +99,12 @@ const ServicosSection = () => {
 
                   </div>
                 )}
-                <button className="servico-btn">Faça seu orçamento</button>
+                <button 
+                  className="servico-btn"
+                  onClick={() => abrirWhatsApp(servico.titulo)}
+                >
+                  Faça seu orçamento
+                </button>
               </div>
             ))}
           </div>
@@ -113,7 +124,12 @@ const ServicosSection = () => {
                 <div className="servico-icon">{servico.icon}</div>
                 <h4 className="servico-titulo">{servico.titulo}</h4>
                 <p className="servico-descricao">{servico.descricao}</p>
-                <button className="servico-btn">Faça seu orçamento</button>
+                <button 
+                  className="servico-btn"
+                  onClick={() => abrirWhatsApp(servico.titulo)}
+                >
+                  Faça seu orçamento
+                </button>
               </div>
             ))}
           </div>
