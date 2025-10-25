@@ -10,17 +10,20 @@
   overflow: hidden;
 }
 
-.hero-video {
+.hero::before {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/base_hero.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: 1;
+  pointer-events: none;
 }
  
 .hero-overlay {
@@ -29,8 +32,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
 .hero-logo {  
@@ -39,7 +42,7 @@
   left: 7%;
   width: 330px;
   height: auto;
-  z-index: 3;
+  z-index: 4;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
   animation-delay: 0.3s;
@@ -50,7 +53,7 @@
   position: absolute;
   /* bottom: 80px; */
   transform: translateX(50%);
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   animation: fadeInUp 1.2s ease forwards;
   opacity: 0;
@@ -156,7 +159,7 @@
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 3;
   animation: fadeIn 1.5s ease forwards, float 3s ease-in-out infinite;
   animation-delay: 1.5s;
   opacity: 0;
@@ -284,19 +287,14 @@
    
  @media (max-width: 932px) and (orientation: landscape) {
       
-    .hero {
-      padding: 100px ;   
-      min-height: 100vh;     
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    } 
-  
-    .hero-video {
-      object-fit: cover;
-      min-height: 100%;
-    }
+   .hero {
+     padding: 100px ;   
+     min-height: 100vh;     
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
   
     .hero-logo {
       position: relative;
