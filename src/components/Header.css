@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-.header-container {
+.header-container {  
   max-width: none;
   width: 100%;
   margin: 0 auto;
@@ -253,14 +253,17 @@
 
   .header-nav-link:hover::after {
     width: 100%;
-  } 
+  }
+  
 }
 
 /* --- Mobile visibility rules --- */
 @media (max-width: 767px) {
   .header-nav { display: none; }
   .header-actions { display: none; }
+  
 }
+
 
 /* modo paisagem */
  /* @media (max-width: 932px) and (orientation: landscape) {
@@ -290,6 +293,7 @@
    gap: 8rem;
    position: relative;
    width: 100%;
+   height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -382,26 +386,50 @@
   box-shadow: 0 6px 22px rgba(36, 160, 67, 0.45);
 }
 
-/* Ícones mobile aparecem apenas em telas pequenas */
-@media (max-width: 450px) {
+/* Ícones mobile aparecem em telas até 767px */
+@media (max-width: 767px) {
   .header-mobile-icons {
     display: flex;
   }
 }
 
-@media (min-width: 451px) {
+@media (min-width: 768px) {
   .header-mobile-icons {
     display: none;
   }
 }
 
 /* Ajuste para desktop - ocultar os ícones mobile */
-@media (min-width: 768px) {
+@media (min-width: 1535px) {
   .header-mobile-icons {
     display: none;
   }
-  .header-mobile-whatsapp {
-    display: none;
+ 
+}
+/* --- Visibilidade do botão "Faça seu orçamento" --- */
+
+/* Oculta o botão em telas menores ou iguais a 1413px */
+@media (max-width: 1413px) {
+  .agendar-btn {
+    display: none !important;
+  }
+  .header-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left:28%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .header-logo-img {
+    margin:0rem 0rem;
   }
 }
 
+/* Oculta o link "Avaliações" em telas menores que 900px */
+@media (max-width: 899px) {
+  .header-nav-link:nth-child(3) {
+    display: none;
+  }
+}

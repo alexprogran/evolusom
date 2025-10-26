@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Sobre nós', href: '#sobre' },
+    { label: 'EvoluSom', href: '#sobre' },
     { label: 'Serviços', href: '#servicos' },
     { label: 'Avaliações', href: '#avaliacoes' } 
   ];
