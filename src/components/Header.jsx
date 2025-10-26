@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Instagram, Share2 } from 'lucide-react';
 import './Header.css';
 
 const Header = () => {
@@ -7,9 +7,12 @@ const Header = () => {
 
   const menuItems = [
     { label: 'Sobre nós', href: '#sobre' },
-    { label: 'Serviços', href: '#servicos' },    
-    { label: 'Produtos', href: '#produtos' },
-    { label: 'Avaliações', href: '#avaliacoes' },
+    { label: 'Serviços', href: '#servicos' },
+    { label: 'Avaliações', href: '#avaliacoes' } 
+  ];
+
+  const menuItemsAfter = [
+   ,
     { label: 'Contato', href: '#contato' },
   ];
 
@@ -22,6 +25,24 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'EvoluSom Equipadora',
+          text: 'Películas, Som, Elétrica e Acessórios',
+          url: window.location.href
+        });
+      } catch (error) {
+        console.log('Erro ao compartilhar:', error);
+      }
+    } else {
+      // Fallback: copiar URL para clipboard
+      navigator.clipboard.writeText(window.location.href);
+      alert('Link copiado para a área de transferência!');
+    }
+  };
+
   return (
     <header className="header">
       <div className="header-container">
@@ -29,6 +50,25 @@ const Header = () => {
           {/* Navegação Desktop */}
           <nav className="header-nav">
             {menuItems.map((item) => (
+              <button
+                key={item.href}
+                className="header-nav-link" 
+                onClick={() => scrollToSection(item.href)}
+                aria-label={item.label}
+              >
+                {item.label}
+              </button>
+            ))}
+            
+            {/* Logo no meio do navbar */}
+            <img 
+              src="/logo.png"
+              alt="EvoluSom Logo"
+              className="header-logo-img"
+              onClick={() => scrollToSection('#inicio')}
+            />
+            
+            {menuItemsAfter.map((item) => (
               <button
                 key={item.href}
                 className="header-nav-link" 
@@ -61,21 +101,42 @@ const Header = () => {
             </a>
           </div>
 
-          {/* Botão Toggle Mobile */}
-          <button
-            className="header-mobile-menu-button menu-toggle"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Abrir menu"
-          >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* Ícones Mobile */}
+          <div className="header-mobile-icons">
+            <button
+              className="header-mobile-icon-button"
+              onClick={handleShare}
+              aria-label="Compartilhar"
+            >
+              <Share2 size={24} />
+            </button>
+            
+            <a
+              href="https://www.instagram.com/evolusom_equipadora"
+              className="header-mobile-icon-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <Instagram size={24} />
+            </a>
+
+            {/* Botão Toggle Mobile */}
+            <button
+              className="header-mobile-menu-button menu-toggle"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Abrir menu"
+            >
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
 
         {/* Menu Mobile */}
         {isMenuOpen && (
           <div className="header-mobile-menu">
             <nav className="header-mobile-nav">
-              {menuItems.map((item) => (
+              {[...menuItems, ...menuItemsAfter].map((item) => (
                 <button
                   key={item.href}
                   className="header-mobile-link"

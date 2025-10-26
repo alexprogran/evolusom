@@ -1,5 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 import './HeroSection.css';
+import CardApresentations from './CardApresentations';
 
 const HeroSection = () => {
   const scrollParaServicos = () => {
@@ -9,14 +10,41 @@ const HeroSection = () => {
     }
   };
 
+  const cardsApresentacao = [
+    {
+      imagem: '/img_aplic_pelicula.png',
+      titulo: 'Aplicação de Película de Proteção'
+    },
+    {
+      imagem: '/img_led_car.webp',
+      titulo: 'Lâmpadas convencionais e leds'
+    },
+    {
+      imagem: '/img_multimidia.webp',
+      titulo: 'Instalação Multimídia'
+    },
+    {
+      imagem: '/img_som_automotivo.webp',
+      titulo: 'Instalação de Som Automotivo'
+    },
+    {
+      imagem: '/img_eletricas.jpg',
+      titulo: 'Instalação de Elétrica'
+    },
+  ];
+
   return (
     <section id="inicio" className="hero">
       <div className="hero-overlay"></div>
-      <img  
-        src="/logo.png"      
-        alt="EvoluSom Logo" 
-        className="hero-logo" 
+      
+      {/* Logo para mobile */}
+      <img 
+        src="/logo.png"
+        alt="EvoluSom Logo"
+        className="hero-logo"
+        onClick={() => scrollParaServicos()}
       />
+      
       {/* <div className="hero-content"> 
         <h1 className="hero-title">
         Películas, multimídias e acessórios 
@@ -46,6 +74,8 @@ const HeroSection = () => {
         </div>
         
       </div> */}
+      
+      <CardApresentations cards={cardsApresentacao} />
       
       <div className="hero-scroll-indicator">
         <ChevronDown size={32} className="scroll-icon" />

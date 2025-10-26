@@ -1,6 +1,6 @@
 .header {
   position: absolute;
-  top: 0;
+  top: 2.5rem;
   left: 0;
   width: 100%;
   height: 90px;
@@ -16,17 +16,19 @@
   max-width: none;
   width: 100%;
   margin: 0 auto;
-  padding: 0 4%;
+  padding: 0 4%; 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   height: 100%;
 }
 
 .logo-container {
+ 
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
   animation: fadeInDown 1s ease forwards;
   animation-delay: 0.2s;
@@ -73,6 +75,7 @@
 }
 
 .agendar-btn {
+  margin-left: -10rem;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -188,12 +191,36 @@
   }
 }
 
+.header-logo-img {
+  margin:3.5rem 3.5rem;
+  width: 330px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.header-logo-img:hover {
+  transform: scale(1.05);
+}
+
 /* --- Desktop visibility rules --- */
 @media (min-width: 768px) {
   .header-mobile-menu-button { display: none; }
   .header-mobile-menu { display: none; }
-  .header-nav { display: flex; align-items: center; gap: 2rem;}
-  .header-actions { display: flex; }
+  .header-nav { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 2rem;
+    flex: 1;
+  }
+  .header-actions {    
+    display: flex; 
+    align-items: center; 
+  }
 
   /* Hover especial apenas no desktop */
   .header-nav-link {
@@ -256,24 +283,61 @@
 
 
 /* --- New header structures --- */
-.header-content {
-  gap: 2rem;
-  position: relative;
-  width: 100%;
+ .header-content {  
+  padding-right: 8rem;
+   gap: 8rem;
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+.header-mobile-icons {
+  position: absolute;
+  top: -2rem;
+  right: 1rem;
+  z-index: 60;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.header-mobile-icon-button {
+  color: var(--branco);
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-mobile-icon-button:hover {
+  color: var(--verde-evolusom);
+  background: rgba(36, 160, 67, 0.1);
+  transform: scale(1.1);
 }
 
 .header-mobile-menu-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 60;
   color: var(--branco);
   background: transparent;
+  border: none;
   border-radius: 8px;
   transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
 }
 
 .header-mobile-menu-button:hover {
@@ -316,4 +380,23 @@
   box-shadow: 0 6px 22px rgba(36, 160, 67, 0.45);
 }
 
+/* Ícones mobile aparecem apenas em telas pequenas */
+@media (max-width: 450px) {
+  .header-mobile-icons {
+    display: flex;
+  }
+}
+
+@media (min-width: 451px) {
+  .header-mobile-icons {
+    display: none;
+  }
+}
+
+/* Ajuste para desktop - ocultar os ícones mobile */
+@media (min-width: 768px) {
+  .header-mobile-icons {
+    display: none;
+  }
+}
 
