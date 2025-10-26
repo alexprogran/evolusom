@@ -191,6 +191,7 @@
   }
 }
 
+
 .header-logo-img {
   margin:3.5rem 3.5rem;
   width: 330px;
@@ -217,7 +218,8 @@
     gap: 2rem;
     flex: 1;
   }
-  .header-actions {    
+  .header-actions {   
+    
     display: flex; 
     align-items: center; 
   }
@@ -396,6 +398,9 @@
 /* Ajuste para desktop - ocultar os ícones mobile */
 @media (min-width: 768px) {
   .header-mobile-icons {
+    display: none;
+  }
+  .header-mobile-whatsapp {
     display: none;
   }
 }
