@@ -147,11 +147,12 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 764px) {
   .carousel-container {
     --card-title-size: 1.5rem;
+   
     width: 90%;
-    height: 350px;
+    height: 50vh;
     margin: 30px auto;
   }
 
@@ -189,8 +190,8 @@
     position: relative;
     width: 100%;
     max-width: 100%;
-    height: 60vh;
-    margin-top: 17rem;
+    height: 50vh;
+    margin-top: 2rem;
     border-radius: 0;
     z-index: 1;
   }
@@ -224,3 +225,15 @@
     height: 10px;
   }
 }
+
+/* Ajuste para garantir espaço abaixo do carrossel em telas até 764px */
+/* @media (max-width: 764px) {
+  .carousel-container {
+    margin-bottom: 0;
+    width: 90%;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+} */

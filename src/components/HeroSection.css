@@ -295,9 +295,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    right: 0; 
     bottom: 0;
-    background-image: url('/base_hero_mobile.png');
+    /* background-image: url('/base_hero_mobile.png'); */
+    background-image: url('/base_hero.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -342,7 +343,7 @@
 
   .hero-logo {
     position: absolute;
-    top: 10%;
+    top: 1%;
     left: 50%;
     transform: translateX(-50%);
     width: 280px;
@@ -423,9 +424,92 @@
     }
   }
 
-/* Ocultar logo do hero em telas maiores que 450px */
-@media (min-width: 451px) {
+/* Ocultar logo do hero apenas em telas maiores que 764px */
+@media (min-width: 765px) {
   .hero-logo {
     display: none;
+  }
+}
+
+/* Mostrar logo em telas até 764px */
+@media (max-width: 764px) {
+
+  
+  .hero-logo {
+    display: block;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: auto;
+    z-index: 3;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .hero-logo:hover {
+    transform: translateX(-50%) scale(1.05);
+  }
+}
+
+/* Botão Nossos Serviços - Mobile */
+.hero-servicos-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--verde-evolusom);
+  color: var(--branco);
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  margin: 30px auto;
+  width: auto;
+  position: relative;
+  z-index: 6;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(36, 160, 67, 0.3);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-servicos-btn:hover {
+  background-color: #1f8a39;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(36, 160, 67, 0.5);
+}
+
+/* Mostrar botão apenas em telas até 764px */
+@media (max-width: 764px) {
+  /* Garantir que o hero empilhe elementos verticalmente */
+  .hero {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10rem;
+  }
+
+  
+  .hero-servicos-btn {
+    display: inline-flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  /* Garantir que o carrossel tenha margin-bottom para espaçar o botão */
+  .carousel-container {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 765px) {
+  .hero-servicos-btn {
+    display: none !important;
   }
 }

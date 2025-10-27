@@ -77,6 +77,15 @@ const HeroSection = () => {
       
       <CardApresentations cards={cardsApresentacao} />
       
+      {/* Botão Nossos Serviços - Mobile */}
+      <button 
+        className="hero-servicos-btn"
+        onClick={scrollParaServicos}
+      >
+        Nossos Serviços
+        <ChevronDown size={20} className="btn-icon" />
+      </button>
+      
       <div className="hero-scroll-indicator">
         <ChevronDown size={32} className="scroll-icon" />
       </div>

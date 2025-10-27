@@ -4,6 +4,15 @@ import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  const closeMenu = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      setIsClosing(false);
+    }, 300); // Tempo da animação de saída
+  };
 
   const menuItems = [
     { label: 'EvoluSom', href: '#sobre' },
@@ -12,7 +21,6 @@ const Header = () => {
   ];
 
   const menuItemsAfter = [
-   ,
     { label: 'Contato', href: '#contato' },
   ];
 
@@ -22,7 +30,7 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
+    closeMenu();
   };
 
   const handleShare = async () => {
@@ -124,7 +132,7 @@ const Header = () => {
             {/* Botão Toggle Mobile */}
             <button
               className="header-mobile-menu-button menu-toggle"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => isMenuOpen ? closeMenu() : setIsMenuOpen(true)}
               aria-label="Abrir menu"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -134,31 +142,40 @@ const Header = () => {
 
         {/* Menu Mobile */}
         {isMenuOpen && (
-          <div className="header-mobile-menu">
-            <nav className="header-mobile-nav">
-              {[...menuItems, ...menuItemsAfter].map((item) => (
-                <button
-                  key={item.href}
-                  className="header-mobile-link"
-                  onClick={() => scrollToSection(item.href)}
-                  aria-label={item.label}
-                >
-                  {item.label}
-                </button>
-              ))}
+          <>
+            {/* Overlay para fechar ao clicar fora */}
+            <div 
+              className={`header-mobile-overlay ${isClosing ? 'closing' : ''}`}
+              onClick={closeMenu}
+            ></div>
+            
+            {/* Sidebar */}
+            <div className={`header-mobile-menu ${isClosing ? 'closing' : ''}`}>
+              <nav className="header-mobile-nav">
+                {[...menuItems, ...menuItemsAfter].map((item) => (
+                  <button
+                    key={item.href}
+                    className="header-mobile-link"
+                    onClick={() => scrollToSection(item.href)}
+                    aria-label={item.label}
+                  >
+                    {item.label}
+                  </button>
+                ))}
 
-              <a
-                href="https://wa.me/557130405086?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20servi%C3%A7o."
-                className="header-mobile-whatsapp"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Agendar Serviços no WhatsApp"
-              >
-                <Phone size={18} />
-                Falar no WhatsApp
-              </a>
-            </nav>
-          </div>
+                <a
+                  href="https://wa.me/557130405086?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20servi%C3%A7o."
+                  className="header-mobile-whatsapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Agendar Serviços no WhatsApp"
+                >
+                  <Phone size={18} />
+                  Falar no WhatsApp
+                </a>
+              </nav>
+            </div>
+          </>
         )}
       </div>
     </header>
