@@ -17,7 +17,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/base_hero.svg');
+  /* background-image: url('/base_hero.svg');  */
+  background-image: url('/hero_background1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -351,7 +352,8 @@
     right: 0; 
     bottom: 0;
     /* background-image: url('/base_hero_mobile.png'); */
-    background-image: url('/base_hero.svg');
+    /* background-image: url('/base_hero.svg'); */
+    background-image: url('/hero_background1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -604,7 +606,510 @@
   
 }
 
-@media (min-width: 765px) {
+/* ================================
+   🖥️ DESKTOP MÉDIO (765px - 899px)
+   ================================ */
+@media (min-width: 765px) and (max-width: 899px) {
+  .hero-servicos-btn {
+    display: none !important;
+  }
+  
+  /* Layout Desktop - lado a lado */
+  .hero-container-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 100px 20px 80px;
+  }
+  
+  .hero-carousel-wrapper {
+    width: 45%;
+    max-width: 500px;
+  }
+  
+  .hero-content-wrapper {
+    width: 55%;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1rem;
+  }
+  
+  /* Ajustar botões para desktop */
+  .hero-buttons {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .hero-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero-btn-whatsapp {
+    display: inline-flex;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Ocultar logo em desktop */
+  .hero-logo {
+    display: none;
+  }
+}
+
+/* ================================
+   🔍 ZOOM 70% - OCULTAR CARROSSEL
+   ================================ */
+@media (max-width: 1100px) and (min-width: 765px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Detectar zoom 70% através de largura muito pequena */
+@media (max-width: 850px) and (min-width: 500px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* ================================
+   🖥️ DESKTOP ULTRA-WIDE (1600px+)
+   ================================ */
+@media (min-width: 1600px) {
+  .hero-servicos-btn {
+    display: none !important;
+  }
+  
+  /* Layout Desktop - lado a lado */
+  .hero-container-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 4rem;
+    padding: 2.5rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 140px 20px 100px;
+  }
+  
+  .hero-carousel-wrapper {
+    width: 50%;
+    max-width: 700px;
+  }
+  
+  .hero-content-wrapper {
+    width: 50%;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1.2rem;
+  }
+  
+  /* Ajustar botões para desktop */
+  .hero-buttons {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+  
+  .hero-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .hero-btn-whatsapp {
+    display: inline-flex;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Ocultar logo em desktop */
+  .hero-logo {
+    display: none;
+  }
+}
+
+/* ================================
+   🔍 ZOOM 70% - OCULTAR CARROSSEL
+   ================================ */
+@media (max-width: 1100px) and (min-width: 765px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Detectar zoom 70% através de largura muito pequena */
+@media (max-width: 850px) and (min-width: 500px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* ================================
+   🖥️ DESKTOP GRANDE (900px - 1199px)
+   ================================ */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .hero-servicos-btn {
+    display: none !important;
+  }
+  
+  /* Layout Desktop - lado a lado */
+  .hero-container-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 2.5rem;
+    padding: 1.8rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 120px 20px 80px;
+  }
+  
+  .hero-carousel-wrapper {
+    width: 48%;
+    max-width: 550px;
+  }
+  
+  .hero-content-wrapper {
+    width: 52%;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 1.6rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1.05rem;
+  }
+  
+  /* Ajustar botões para desktop */
+  .hero-buttons {
+    flex-direction: row;
+    gap: 1.2rem;
+    justify-content: flex-start;
+  }
+  
+  .hero-btn {
+    padding: 0.85rem 1.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .hero-btn-whatsapp {
+    display: inline-flex;
+    padding: 0.85rem 1.8rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Ocultar logo em desktop */
+  .hero-logo {
+    display: none;
+  }
+}
+
+/* ================================
+   🔍 ZOOM 70% - OCULTAR CARROSSEL
+   ================================ */
+@media (max-width: 1100px) and (min-width: 765px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Detectar zoom 70% através de largura muito pequena */
+@media (max-width: 850px) and (min-width: 500px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* ================================
+   🖥️ DESKTOP ULTRA-WIDE (1600px+)
+   ================================ */
+@media (min-width: 1600px) {
+  .hero-servicos-btn {
+    display: none !important;
+  }
+  
+  /* Layout Desktop - lado a lado */
+  .hero-container-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 4rem;
+    padding: 2.5rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 140px 20px 100px;
+  }
+  
+  .hero-carousel-wrapper {
+    width: 50%;
+    max-width: 700px;
+  }
+  
+  .hero-content-wrapper {
+    width: 50%;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1.2rem;
+  }
+  
+  /* Ajustar botões para desktop */
+  .hero-buttons {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+  
+  .hero-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .hero-btn-whatsapp {
+    display: inline-flex;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Ocultar logo em desktop */
+  .hero-logo {
+    display: none;
+  }
+}
+
+/* ================================
+   🔍 ZOOM 70% - OCULTAR CARROSSEL
+   ================================ */
+@media (max-width: 1100px) and (min-width: 765px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Detectar zoom 70% através de largura muito pequena */
+@media (max-width: 850px) and (min-width: 500px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* ================================
+   🖥️ DESKTOP MUITO GRANDE (1200px+)
+   ================================ */
+@media (min-width: 1200px) {
   .hero-servicos-btn {
     display: none !important;
   }
@@ -626,6 +1131,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    padding: 120px 20px 80px;
   }
   
   .hero-carousel-wrapper {
@@ -670,5 +1176,182 @@
   /* Ocultar logo em desktop */
   .hero-logo {
     display: none;
+  }
+}
+
+/* ================================
+   🔍 ZOOM 70% - OCULTAR CARROSSEL
+   ================================ */
+@media (max-width: 1100px) and (min-width: 765px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Detectar zoom 70% através de largura muito pequena */
+@media (max-width: 850px) and (min-width: 500px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* ================================
+   🖥️ DESKTOP ULTRA-WIDE (1600px+)
+   ================================ */
+@media (min-width: 1600px) {
+  .hero-servicos-btn {
+    display: none !important;
+  }
+  
+  /* Layout Desktop - lado a lado */
+  .hero-container-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 4rem;
+    padding: 2.5rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 140px 20px 100px;
+  }
+  
+  .hero-carousel-wrapper {
+    width: 50%;
+    max-width: 700px;
+  }
+  
+  .hero-content-wrapper {
+    width: 50%;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1.2rem;
+  }
+  
+  /* Ajustar botões para desktop */
+  .hero-buttons {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+  
+  .hero-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .hero-btn-whatsapp {
+    display: inline-flex;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Ocultar logo em desktop */
+  .hero-logo {
+    display: none;
+  }
+}
+
+/* ================================
+   🔍 ZOOM 70% - OCULTAR CARROSSEL
+   ================================ */
+@media (max-width: 1100px) and (min-width: 765px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Detectar zoom 70% através de largura muito pequena */
+@media (max-width: 850px) and (min-width: 500px) {
+  .hero-carousel-wrapper {
+    display: none !important;
+  }
+  
+  .hero-content-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  
+  .hero-container-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }

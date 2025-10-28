@@ -60,35 +60,13 @@ const SobreSection = () => {
             alt="EvoluSom Logo" 
             className="sobre-logo" 
           /> */}
+          <h1 className="sobre-titulo">
+            <span className="titulo-branco">Sobre a </span>
+            <span className="titulo-verde">EvoluSom</span>
+          </h1>
         </div>
 
         <div className="sobre-content">
-          <div className="sobre-texto">
-            <p className="sobre-paragrafo">
-              Há mais de 10 anos oferecemos soluções completas e inovadoras, desde a instalação de películas de proteção
-              e sistemas de som até serviços elétricos, instalação de multimídias e acessórios de alta qualidade. Temos uma
-              equipe especializada, pronta para lhe atender.                
-            </p>
-
-            <div className="sobre-diferenciais">
-              <div className="diferencial-card">
-                <Shield className="diferencial-icon" size={40} />
-                <h3>Garantia</h3>
-                <p>Produtos e serviços certificados com garantia </p>
-              </div>
-              <div className="diferencial-card">
-                <Award className="diferencial-icon" size={40} />
-                <h3>Excelência</h3>
-                <p>Reconhecidos pela qualidade e profissionalismo</p>
-              </div>
-              <div className="diferencial-card">
-                <Users className="diferencial-icon" size={40} />
-                <h3>Atendimento Premium</h3>
-                <p>Equipe qualificada e atendimento personalizado</p>
-              </div>
-            </div>
-          </div>
-
           <div className="sobre-video">
             {!mostrarVideo ? (
               <div className="video-cover">
@@ -124,6 +102,32 @@ const SobreSection = () => {
                 </video>
               </div>
             )}
+          </div>
+
+          <div className="sobre-texto">
+            <p className="sobre-paragrafo">
+              Há mais de 10 anos oferecemos soluções completas e inovadoras, desde a instalação de películas de proteção
+              e sistemas de som até serviços elétricos, instalação de multimídias e acessórios de alta qualidade. Temos uma
+              equipe especializada, pronta para lhe atender.                
+            </p>
+
+            <div className="sobre-diferenciais">
+              <div className="diferencial-card">
+                <Shield className="diferencial-icon" size={40} />
+                <h3>Garantia</h3>
+                <p>Produtos e serviços certificados com garantia </p>
+              </div>
+              <div className="diferencial-card">
+                <Award className="diferencial-icon" size={40} />
+                <h3>Excelência</h3>
+                <p>Reconhecidos pela qualidade e profissionalismo</p>
+              </div>
+              <div className="diferencial-card">
+                <Users className="diferencial-icon" size={40} />
+                <h3>Atendimento Premium</h3>
+                <p>Equipe qualificada e atendimento personalizado</p>
+              </div>
+            </div>
           </div>
         </div>
       </div> 
