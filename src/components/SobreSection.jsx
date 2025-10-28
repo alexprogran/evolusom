@@ -8,6 +8,10 @@ const SobreSection = () => {
   const handleAssistirVideo = () => {
     setMostrarVideo(true);
   };
+
+  const handleVideoEnded = () => {
+    setMostrarVideo(false);
+  };
   
   return (
     <section id="sobre" className="sobre">
@@ -22,14 +26,14 @@ const SobreSection = () => {
                 className="video-cover-image"
               />
               <div className="video-cover-content">
-                {/* <p className="video-cover-text">Saiba mais sobre a EvoluSom</p>
+                {/* <p className="video-cover-text">Saiba mais sobre a EvoluSom</p> */}
                 <button 
                   className="video-play-button"
                   onClick={handleAssistirVideo}
                 >
                   <PlayCircle size={24} />
-                  Assista o vídeo
-                </button> */}
+                  {/* Assista o vídeo */}
+                </button>
               </div>
             </div>
           ) : (
@@ -37,10 +41,12 @@ const SobreSection = () => {
               <video
                 className="servico-video"
                 controls
+                controlsList="nofullscreen nodownload noremoteplayback"
                 autoPlay
                 muted
                 playsInline
                 preload="metadata"
+                onEnded={handleVideoEnded}
               >
                 <source src="/apresent_1.mp4" type="video/mp4" />
               </video>
@@ -107,10 +113,12 @@ const SobreSection = () => {
                 <video
                   className="servico-video"
                   controls
+                  controlsList="nofullscreen nodownload noremoteplayback"
                   autoPlay
                   muted
                   playsInline
                   preload="metadata"
+                  onEnded={handleVideoEnded}
                 >
                   <source src="/apresent_1.mp4" type="video/mp4" />
                 </video>

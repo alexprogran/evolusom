@@ -206,23 +206,31 @@
 .video-play-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background-color: var(--verde-evolusom);
+  justify-content: center;
+  gap: 0;
+  background-color: transparent;
   color: var(--branco);
-  padding: 1rem 2rem;
+  padding: 0;
   font-size: 1.1rem;
   font-weight: 600;
-  border: 2px solid transparent;
-  border-radius: 50px;
+  border: none;
+  border-radius: 50%;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(36, 160, 67, 0.3);
+  box-shadow: none;
   cursor: pointer;
+  width: 60px;
+  height: 60px;
 }
 
 .video-play-button:hover {
-  background-color: #1f8a39;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(36, 160, 67, 0.5);
+  background-color: transparent;
+  transform: scale(1.1);
+  color: var(--verde-evolusom);
+}
+
+.video-play-button svg {
+  width: 60px;
+  height: 60px;
 }
 
 /* .sobre-video-player {
