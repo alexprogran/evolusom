@@ -55,11 +55,11 @@ const SobreSection = () => {
         </div>
 
         <div className="sobre-header">
-          <img 
+          {/* <img 
             src="/logo.png"  
             alt="EvoluSom Logo" 
             className="sobre-logo" 
-          />
+          /> */}
         </div>
 
         <div className="sobre-content">
