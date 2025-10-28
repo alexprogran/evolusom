@@ -1,12 +1,19 @@
 .sobre {
-  background: linear-gradient(180deg, #000000 0%, #060606 100%);
+  /* background: linear-gradient(180deg, #000000 0%, #060606 100%); */
+  background: linear-gradient(180deg, #323030 0%, #050505 100%);
+
   position: relative;
 }
 
 @media (max-width: 932px) and (orientation: landscape) {
 .container {
-  padding: 0 20px ;
-  
+  padding: 0 20px;
+}
+}
+
+@media (max-width: 450px) {
+.container {
+  padding: 0 !important;
 }
 }
 
@@ -38,9 +45,10 @@
   color: var(--branco);
   margin-bottom: 1rem;
 }
-.title-underline {
+
+/* .title-underline {
   position: absolute;
-  top: 100px;
+  top: -150px;      
   left: 50%;
   transform: translateX(-50%);
   width: 260px;
@@ -48,9 +56,14 @@
   background-color: var(--verde-evolusom);
   margin: 0 auto;
   border-radius: 2px;
-}
+} */
+
+
+
+
 
 .sobre-content {
+  margin-top: -40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -127,14 +140,89 @@
   opacity: 0;
 }
 
+/* Vídeo mobile - oculto por padrão */
+.sobre-video-mobile {
+  display: none;
+}
+
 .video-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: relative; 
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(36, 160, 67, 0.2);
+}
+
+/* Capa do vídeo */
+.video-cover {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(36, 160, 67, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-cover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(36, 160, 67, 0.4);
+}
+
+.video-cover-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.video-cover-content {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.video-cover-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--branco);
+  text-align: center;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.video-play-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--verde-evolusom);
+  color: var(--branco);
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(36, 160, 67, 0.3);
+  cursor: pointer;
+}
+
+.video-play-button:hover {
+  background-color: #1f8a39;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(36, 160, 67, 0.5);
 }
 
 /* .sobre-video-player {
@@ -228,7 +316,7 @@
    ================================ */
 @media (max-width: 767px) {
   .sobre {
-    padding: 60px 20px;
+    padding: 0;
   }
 
   .sobre-header {
@@ -288,11 +376,69 @@
 }
 
 /* ================================
+   📱 MOBILE ATÉ 450px - Vídeo acima do logo
+   ================================ */
+@media (max-width: 450px) {
+  .sobre {
+    padding: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  body {
+    margin: 0 !important;
+  }
+  
+  /* Mostrar vídeo mobile acima do logo */
+  .sobre-video-mobile {
+    display: block;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+
+  .sobre-video-mobile .video-cover {
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sobre-video-mobile .video-cover-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .sobre-header {
+    padding: 20px 15px 0;
+    margin-bottom: 2rem;
+  }
+
+  .sobre-texto {
+    padding: 0 15px;
+  }
+
+  .sobre-video {
+    display: none; /* Ocultar vídeo desktop */
+  }
+}
+
+/* ================================
    📱 MOBILE PEQUENO (até 480px)
    ================================ */
 @media (max-width: 480px) {
   .sobre {
-    padding: 50px 15px;
+    padding: 0;
   }
 
   .sobre-header {

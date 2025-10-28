@@ -1,29 +1,68 @@
-import { Shield, Award, Users } from 'lucide-react';
+import { useState } from 'react';
+import { Shield, Award, Users, PlayCircle } from 'lucide-react';
 import './SobreSection.css';
 
-const SobreSection = () => { 
+const SobreSection = () => {
+  const [mostrarVideo, setMostrarVideo] = useState(false);
+
+  const handleAssistirVideo = () => {
+    setMostrarVideo(true);
+  };
+  
   return (
     <section id="sobre" className="sobre">
       <div className="container">
+        {/* Vídeo para mobile - aparece no topo */}
+        <div className="sobre-video-mobile">
+          {!mostrarVideo ? (
+            <div className="video-cover">
+              <img 
+                src="/img_loja.png" 
+                alt="EvoluSom Loja" 
+                className="video-cover-image"
+              />
+              <div className="video-cover-content">
+                {/* <p className="video-cover-text">Saiba mais sobre a EvoluSom</p>
+                <button 
+                  className="video-play-button"
+                  onClick={handleAssistirVideo}
+                >
+                  <PlayCircle size={24} />
+                  Assista o vídeo
+                </button> */}
+              </div>
+            </div>
+          ) : (
+            <div className="video-wrapper">            
+              <video
+                className="servico-video"
+                controls
+                autoPlay
+                muted
+                playsInline
+                preload="metadata"
+              >
+                <source src="/apresent_1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          )}
+        </div>
+
         <div className="sobre-header">
-        <img 
-        src="/logo.png" 
-        alt="EvoluSom Logo" 
-        className="sobre-logo" 
-      />
-          {/* <h2 className="section-title">Sobre a Evolu<span className="brand-s">S</span>om</h2> */}
-          <div className="title-underline"></div>
+          <img 
+            src="/logo.png"  
+            alt="EvoluSom Logo" 
+            className="sobre-logo" 
+          />
         </div>
 
         <div className="sobre-content">
           <div className="sobre-texto">
             <p className="sobre-paragrafo">
-            Há mais de 10 anos oferecemos soluções completas e inovadoras, desde a instalação de películas de proteção
-            e sistemas de som até serviços elétricos, instalação de multimídias e acessórios de alta qualidade. Temos uma
-            equipe especializada, pronta para lhe atender.
-                
+              Há mais de 10 anos oferecemos soluções completas e inovadoras, desde a instalação de películas de proteção
+              e sistemas de som até serviços elétricos, instalação de multimídias e acessórios de alta qualidade. Temos uma
+              equipe especializada, pronta para lhe atender.                
             </p>
-            
 
             <div className="sobre-diferenciais">
               <div className="diferencial-card">
@@ -45,29 +84,38 @@ const SobreSection = () => {
           </div>
 
           <div className="sobre-video">
-            <div className="video-wrapper">            
-              <video
-                className="servico-video"
-                controls
-                muted
-                playsInline
-                preload="metadata"
-                // onLoadedMetadata={(e) => {
-                //   const video = e.target;
-                //   // Define o tempo desejado do frame (ex: 3 segundos ou 25% da duração)
-                //   const tempoDesejado = Math.min(video.duration * 0.97, video.duration - 0.1);
-                //   video.currentTime = tempoDesejado;
-
-                //   // Quando o vídeo realmente chega naquele frame
-                //   video.onseeked = () => {
-                //     video.pause(); // garante que fica pausado
-                //   };
-                // }}
+            {!mostrarVideo ? (
+              <div className="video-cover">
+                <img 
+                  src="/img_loja.png" 
+                  alt="EvoluSom Loja" 
+                  className="video-cover-image"
+                />
+                <div className="video-cover-content">
+                  <p className="video-cover-text">Saiba mais sobre a EvoluSom</p>
+                  <button 
+                    className="video-play-button"
+                    onClick={handleAssistirVideo}
+                  >
+                    <PlayCircle size={24} />
+                    Assista o vídeo
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="video-wrapper">            
+                <video
+                  className="servico-video"
+                  controls
+                  autoPlay
+                  muted
+                  playsInline
+                  preload="metadata"
                 >
-                <source src="/apresent_1.mp4" type="video/mp4" />
-              </video>
-
-            </div> 
+                  <source src="/apresent_1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            )}
           </div>
         </div>
       </div> 
