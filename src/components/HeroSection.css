@@ -48,6 +48,35 @@
   animation-delay: 0.3s;
 }
 
+/* Container wrapper para layout desktop */
+.hero-container-wrapper {
+  display: none;
+}
+
+/* Carrossel Mobile - visível apenas até 764px */
+.hero-mobile-carousel {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  max-width: 100%;
+  margin: 2rem auto 1rem auto;
+}
+
+/* Ocultar carrossel mobile em desktop */
+@media (min-width: 765px) {
+  .hero-mobile-carousel {
+    display: none !important;
+  }
+}
+
+/* Mobile até 764px - garantir que o carrossel apareça */
+@media (max-width: 764px) {
+  .hero-mobile-carousel {
+    display: block !important;
+  }
+}
+
 .hero-content { 
   padding-top: 100px;
   position: absolute;
@@ -58,6 +87,30 @@
   animation: fadeInUp 1.2s ease forwards;
   opacity: 0;
   animation-delay: 0.5s;
+}
+
+.hero-carousel-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-content-wrapper .hero-content {
+  position: relative;
+  transform: none;
+  opacity: 1;
+  animation: fadeInUp 1.2s ease forwards;
+  padding-top: 0;
+  text-align: left;
 }
 
 .hero-title {
@@ -491,12 +544,30 @@
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 10rem;
+    min-height: 100vh;
   }
-
+  
+  /* Ocultar wrapper desktop em mobile */
+  .hero-container-wrapper {
+    display: none !important;
+  }
+  
+  /* Espaçamento do carrossel mobile */
+  .hero-mobile-carousel {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-mobile-carousel .carousel-container {
+    width: 90%;
+    height: 40vh;
+    min-height: 300px;
+    max-height: 400px;
+  }
   
   .hero-servicos-btn {
     display: inline-flex;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
     width: 80%;
     max-width: 400px;
@@ -508,8 +579,96 @@
   }
 }
 
+/* Para telas até 450px - carrossel com 100% de largura */
+@media (max-width: 450px) {
+  .hero-mobile-carousel {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .hero-mobile-carousel{  
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-mobile-carousel .carousel-container {
+    width: 100%;
+    max-width: 100%;
+    height: 50vh;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .hero {
+    padding: 100px 0 60px;
+  }
+  
+}
+
 @media (min-width: 765px) {
   .hero-servicos-btn {
     display: none !important;
+  }
+  
+  /* Layout Desktop - lado a lado */
+  .hero-container-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 3rem;
+    padding: 2rem;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .hero-carousel-wrapper {
+    width: 50%;
+    max-width: 600px;
+  }
+  
+  .hero-content-wrapper {
+    width: 50%;
+  }
+  
+  .hero-content-wrapper .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content-wrapper .hero-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content-wrapper .hero-description {
+    font-size: 1.1rem;
+  }
+  
+  /* Ajustar botões para desktop */
+  .hero-buttons {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+  
+  .hero-btn {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .hero-btn-whatsapp {
+    display: inline-flex;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* Ocultar logo em desktop */
+  .hero-logo {
+    display: none;
   }
 }

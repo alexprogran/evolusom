@@ -1,9 +1,9 @@
 .carousel-container {
   --card-title-size: 2rem; /* Altere este valor para mudar o tamanho da fonte do título */
   position: relative;
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
-  height: 500px;
+  height: 400px;
   margin: 50px auto;
   overflow: hidden;
   border-radius: 20px;
