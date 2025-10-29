@@ -21,7 +21,7 @@ const SobreSection = () => {
           {!mostrarVideo ? (
             <div className="video-cover">
               <img 
-                src="/img_loja.png" 
+                src="/img_evolusom_capa_video.webp" 
                 alt="EvoluSom Loja" 
                 className="video-cover-image"
               />
@@ -55,11 +55,7 @@ const SobreSection = () => {
         </div>
 
         <div className="sobre-header">
-          {/* <img 
-            src="/logo.png"  
-            alt="EvoluSom Logo" 
-            className="sobre-logo" 
-          /> */}
+          
           <h1 className="sobre-titulo">
             <span className="titulo-branco">Sobre a </span>
             <span className="titulo-verde">EvoluSom</span>
@@ -71,7 +67,7 @@ const SobreSection = () => {
             {!mostrarVideo ? (
               <div className="video-cover">
                 <img 
-                  src="/img_loja.png" 
+                  src="/img_evolusom_capa_video.webp" 
                   alt="EvoluSom Loja" 
                   className="video-cover-image"
                 />
