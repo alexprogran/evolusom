@@ -3,7 +3,12 @@
   position: relative;
 }
 
-.servicos-header {
+/* Container específico para servicos - permite largura maior que o container padrão */
+.servicos .container {
+  max-width: 1500px; /* Maior que o container padrão (1200px) para acomodar cards de 1400px */
+}
+
+.servicos-header { 
   text-align: center;
   margin-bottom: 4rem;
   position: relative;
@@ -25,6 +30,14 @@
   font-size: 1.1rem;
   color: var(--cinza); 
   margin-top: 1rem;
+}
+
+.servicos-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+  width: 100%;
 }
 
 .servicos-categoria {

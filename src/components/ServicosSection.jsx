@@ -1,4 +1,5 @@
 import { Home, Shield, Music, Zap, Building2, Monitor, ShoppingBag, Plug, Volume2, Lightbulb } from 'lucide-react';
+import ServicoCard from './ServicoCard';
 import './ServicosSection.css';
 
 const ServicosSection = () => {
@@ -76,6 +77,30 @@ const ServicosSection = () => {
           <p className="servicos-subtitle">
             Soluções completas para atender todas as suas necessidades
           </p>
+        </div>
+
+        {/* Exemplos de uso do ServicoCard */}
+        <div className="servicos-cards-container">
+          <ServicoCard
+            titulo="Instalação de Película Premium"
+            texto="Oferecemos um serviço de instalação de películas automotivas de alta qualidade, com acabamento impecável e proteção superior contra raios UV e calor. Nossas películas são certificadas e garantem durabilidade excepcional."
+            imagem="/img_evolusom_capa_video.webp"
+            video="/aplic_pelicula2.mp4"
+          />
+          
+          <ServicoCard
+            titulo="Sistemas de Som Automotivo"
+            texto="Recuperamos e instalamos sistemas de som com técnicas modernas que preservam a qualidade original do veículo, devolvendo potência sonora e clareza excepcionais para uma experiência musical única."
+            imagem="/img_evolusom_capa_video.webp"
+            video="/install_som.mp4"
+          />
+          
+          <ServicoCard
+            titulo="Instalações Elétricas Especializadas"
+            texto="Realizamos instalações elétricas automotivas com segurança e precisão, utilizando equipamentos de última geração e técnicas profissionais que garantem funcionamento perfeito e durabilidade."
+            imagem="/img_evolusom_capa_video.webp"
+            video="/install_eletric.mp4"
+          />
         </div>
 
         {/* <div className="servicos-categoria">          
