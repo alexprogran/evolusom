@@ -1,20 +1,6 @@
 .sobre {
-  /* background: linear-gradient(180deg, #000000 0%, #060606 100%); */
   background: linear-gradient(180deg, #323030 0%, #050505 100%);
-
   position: relative;
-}
-
-@media (max-width: 932px) and (orientation: landscape) {
-.container {
-  padding: 0 20px;
-}
-}
-
-@media (max-width: 450px) {
-.container {
-  padding: 0 !important;
-}
 }
 
 .sobre-header {
@@ -23,33 +9,45 @@
   margin-bottom: 4rem;
   padding-top: 80px;
   min-height: 180px;
-} 
-
-.sobre-logo {
-  position: absolute;
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: auto;
-  margin: 0 auto 2rem;
-  display: block;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.2s;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--branco);
-  margin-bottom: 1rem;
+.sobre-badge {
+  position: absolute;
+  top: -80px; /* Reduzido de -120px para -80px */
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(36, 160, 67, 0.1);
+  color: var(--verde-evolusom);
+  border: 1px solid rgba(36, 160, 67, 0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.badge-emoji {
+  color: inherit;
+  font-size: 1rem;
+}
+
+.badge-text {
+  color: var(--verde-evolusom);
+}
+
+.sobre-linhas-brancas {
+  color: #fff;
 }
 
 .sobre-titulo {
   font-size: 3rem;
   font-weight: 700;
-  margin-top: -20px;
+  margin-top: 0;
   text-align: center;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
@@ -64,21 +62,17 @@
   color: var(--verde-evolusom);
 }
 
-/* .title-underline {
-  position: absolute;
-  top: -150px;      
-  left: 50%;
-  transform: translateX(-50%);
-  width: 260px;
-  height: 4px;
-  background-color: var(--verde-evolusom);
-  margin: 0 auto;
-  border-radius: 2px;
-} */
-
-
-
-
+.sobre-subtitulo {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  margin-top: 1.5rem;
+  line-height: 1.4;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.4s;
+}
 
 .sobre-content {
   margin-top: -40px;
@@ -98,18 +92,6 @@
   color: var(--cinza);
   margin-bottom: 1.5rem;
   text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  word-spacing: normal;
-  letter-spacing: normal;
-  overflow-wrap: anywhere;
-  word-break: normal;
-}
-
-.sobre-paragrafo strong {
-  color: var(--verde-evolusom);
-  font-weight: 600;
 }
 
 .sobre-diferenciais {
@@ -152,16 +134,94 @@
   line-height: 1.5;
 }
 
-.sobre-video {
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
+/* Ajuste responsivo para telas grandes */
+@media (min-width: 1200px) {
+  .sobre-badge {
+    top: -30px; /* Reduzido para diminuir distância */
+    font-size: 1rem;
+    padding: 0.6rem 1.8rem;
+  }
+
+  .sobre-titulo {
+    margin-top: -65px;
+    font-size: 3rem;
+  }
+
+  .sobre-subtitulo {
+    margin-top: -5px;
+    font-size: 1.4rem;
+  }
 }
 
-/* Vídeo mobile - oculto por padrão */
-.sobre-video-mobile {
-  display: none;
-}
+/* Mobile ajustes */
+@media (max-width: 768px) {
+  .sobre-badge {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 0 auto 1rem;
+    display: inline-flex;
+  } 
+
+  .sobre-titulo {
+    font-size: 2rem;
+  }
+
+  .sobre-subtitulo {
+    font-size: 1.3rem;
+  }
+  
+  .sobre-paragrafo {
+    padding-right: 11.5rem;
+    text-align: justify;
+  }
+  
+   .sobre-content {   
+    
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+    .sobre-paragrafo {
+     padding-right: 1rem;
+     padding-left: 1rem;
+        text-align: start;
+     line-height: 1.7;
+     font-size: 1rem;
+     color: #eee4e4;
+     text-indent: 0;
+     margin: 1.5rem 0;
+     letter-spacing: 0.5px;
+   }
+    
+   .sobre-diferenciais {
+     grid-template-columns: repeat(3, 1fr);
+     gap: 0.5rem;
+     margin-top: 2rem;
+   }
+   
+   .diferencial-card {
+     padding: 0.8rem 0.5rem;
+   }
+   
+   .diferencial-card p {
+     display: none;
+   }
+   
+   .diferencial-card h3 {
+     font-size: 0.8rem;
+     margin-bottom: 0;
+   }
+   
+   .diferencial-icon {
+     width: 24px;
+     height: 24px;
+     margin-bottom: 0.5rem;
+   }
+   
+ }
+/* --- Estilos do Vídeo --- */
 
 .video-wrapper {
   display: flex;
@@ -194,10 +254,21 @@
   height: auto;
   display: block;
   object-fit: cover;
+  position: relative;
+}
+
+.video-cover-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .video-cover-content {
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -210,6 +281,7 @@
   background: rgba(0, 0, 0, 0);
   padding: 2rem;
   gap: 1.5rem;
+  z-index: 2;
 }
 
 .video-cover-text {
@@ -251,372 +323,37 @@
   height: 60px;
 }
 
-/* .sobre-video-player {
-  display: block;
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  background: #000;
-} */
-.sobre-video-player {
-  display: block;
-  width: 80%;
-  height: auto;
-  object-fit: contain;
-  background: #000;
-}
+/* --- Controle de visibilidade dos vídeos --- */
 
- 
-
-.video-placeholder {
-  aspect-ratio: 16/9;
-  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(36, 160, 67, 0.3);
-}
-
-.video-placeholder p {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--verde-evolusom);
-  margin-bottom: 0.5rem;
-}
-
-.video-placeholder span {
-  font-size: 1rem;
-  color: var(--cinza);
-}
-
-/* ================================
-   📱 TABLET (768px - 1140px)
-   ================================ */
-@media (max-width: 1140px) {
-  .sobre-header {
-    padding-top: 70px;
-    min-height: 160px;
-    margin-bottom: 3rem;
-  }
-
-  .sobre-logo {
-    top: -40px;
-    width: 260px;
-  }
-
-  .video-underline {
-    top: 110px;
-    width: 200px;
-  }
-
-  .sobre-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .sobre-paragrafo {
-    font-size: 1rem;
-  }
-
-  /* .sobre-diferenciais {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-    margin-top: 2rem;
-  } */
-.sobre-diferenciais {
+/* Esconde o vídeo mobile em telas grandes */
+.sobre-video-mobile {
   display: none;
 }
 
-  .diferencial-card {
-    padding: 1.2rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-}
-
-/* ================================
-   📱 MOBILE GRANDE (481px - 1140px)
-   ================================ */
-@media (max-width: 1140px) {
-  .sobre {
-    padding: 0;
-  }
-
-  .sobre-header {
-    padding-top: 60px;
-    min-height: 140px;
-    margin-bottom: 2.5rem;
-  }
-
-  .sobre-logo {
-    top: -30px;
-    width: 220px;
-  }
-
-  .title-underline {
-    top: 100px;
-    width: 180px;
-    height: 3px;
-  }
-
-  .sobre-content {
-    gap: 2.5rem;
-  }
-
-  .sobre-paragrafo {
-    font-size: 0.95rem;
-    text-align: left;
-  } 
-
-  /* .sobre-diferenciais {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 1.5rem; 
-  } */
-   .sobre-diferenciais {
+/* Esconde o vídeo desktop em telas pequenas */
+@media (max-width: 768px) {
+  .sobre-video {
     display: none;
   }
 
-  .diferencial-card {
-    padding: 1rem;
-  }
-
-  .diferencial-icon {
-    margin-bottom: 0.8rem;
-  }
- 
-  .diferencial-card h3 {
-    font-size: 0.95rem;
-  }
-
-  .diferencial-card p {
-    font-size: 0.8rem;
-  }
-
-  .video-wrapper {
-    border-radius: 12px;
-  }
-}
-
-/* ================================
-   📱 MOBILE ATÉ 450px - Vídeo acima do logo
-   ================================ */
-@media (max-width: 450px) {
-  .sobre {
-    padding: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  .container {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  body {
-    margin: 0 !important;
-  }
-  
-  /* Mostrar vídeo mobile acima do logo */
   .sobre-video-mobile {
     display: block;
     width: 100vw;
-    margin: 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
     padding: 0;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    transform: translateX(-50%);
   }
-
+  
   .sobre-video-mobile .video-cover {
     border-radius: 0;
-    width: 100%;
     margin: 0;
     padding: 0;
   }
-
+  
   .sobre-video-mobile .video-cover-image {
     width: 100%;
     height: auto;
     object-fit: cover;
-    display: block;
-  }
-
-  .sobre-header {
-    padding: 20px 15px 0;
-    margin-bottom: 2rem;
-  }
- .sobre-titulo {
-  font-size: 2rem;
-  text-align: center;
- }
-  .sobre-texto {
-    padding: 0 15px;
-  }
-
-  .sobre-video {
-    display: none; /* Ocultar vídeo desktop */
-  }
-}
-
-/* ================================
-   📱 MOBILE PEQUENO (até 480px)
-   ================================ */
-@media (max-width: 480px) {
-  .sobre {
-    padding: 0;
-  }
-
-  .sobre-header {
-    padding-top: 50px;
-    min-height: 120px;
-    margin-bottom: 2rem;
-  }
-
-  .sobre-logo {
-    top: -25px;
-    width: 180px;
-  }
-
-  .title-underline {
-    top: 85px;
-    width: 150px;
-    height: 3px;
-  }
-
-  .sobre-content {
-    gap: 2rem;
-  }
-
-  .sobre-paragrafo {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .sobre-diferenciais {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-    margin-top: 1.2rem;
-  }
-
-  .diferencial-card {
-    padding: 0.8rem;
-  }
-
-  .diferencial-icon {
-    width: 32px;
-    height: 32px;
-  }
-
-  .diferencial-card h3 {
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .diferencial-card p {
-    font-size: 0.75rem;
-  }
-
-  .video-wrapper {
-    border-radius: 8px;
-  }
-}
-
-/* ================================
-   📱 MOBILE HORIZONTAL (Landscape)
-   ================================ */
-@media (max-width: 932px) and (orientation: landscape) {
-  .sobre {
-    padding: 40px 20px;
-  }
-
-  .sobre-header {
-    padding-top: 50px;
-    min-height: 100px;
-    margin-bottom: 1.5rem;
-  }
-
-  .sobre-logo {
-    top: -20px;
-    width: 160px;
-  }
-
-  .title-underline {
-    top: 70px;
-    width: 130px;
-    height: 2px;
-  }
-
-  .sobre-content {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .sobre-paragrafo {
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-  }
-
-  .sobre-diferenciais {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.8rem;
-    margin-top: 1rem;
-  }
-
-  .diferencial-card {
-    padding: 0.6rem;
-  }
-
-  .diferencial-icon {
-    width: 28px;
-    height: 28px;
-    margin-bottom: 0.5rem;
-  }
-
-  .diferencial-card h3 {
-    font-size: 0.75rem;
-  }
-
-  .diferencial-card p {
-    font-size: 0.65rem;
-  }
-}
-
-/* ================================
-   📱 MOBILE MUITO PEQUENO (até 360px)
-   ================================ */
-@media (max-width: 360px) {
-  .sobre {
-    padding: 40px 10px;
-  }
-
-  .sobre-header {
-    padding-top: 45px;
-    min-height: 110px;
-  }
-
-  .sobre-logo {
-    top: -20px;
-    width: 160px;
-  }
-
-  .title-underline {
-    top: 75px;
-    width: 130px;
-  }
-
-  .sobre-paragrafo {
-    font-size: 0.85rem;
-  }
-
-  .diferencial-card {
-    padding: 0.7rem;
-  }
-
-  .diferencial-card h3 {
-    font-size: 0.85rem;
+    border-radius: 0;
   }
 }

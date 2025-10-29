@@ -12,7 +12,7 @@ const SobreSection = () => {
   const handleVideoEnded = () => {
     setMostrarVideo(false);
   };
-  
+
   return (
     <section id="sobre" className="sobre">
       <div className="container">
@@ -26,13 +26,11 @@ const SobreSection = () => {
                 className="video-cover-image"
               />
               <div className="video-cover-content">
-                {/* <p className="video-cover-text">Saiba mais sobre a EvoluSom</p> */}
                 <button 
                   className="video-play-button"
                   onClick={handleAssistirVideo}
                 >
                   <PlayCircle size={24} />
-                  {/* Assista o vídeo */}
                 </button>
               </div>
             </div>
@@ -55,11 +53,19 @@ const SobreSection = () => {
         </div>
 
         <div className="sobre-header">
-          
+          <div className="sobre-badge">
+            <span className="badge-emoji">✨</span>
+            <span className="badge-text">Saiba um pouco mais sobre nós!</span>
+          </div>
+
           <h1 className="sobre-titulo">
-            <span className="titulo-branco">Sobre a </span>
-            <span className="titulo-verde">EvoluSom</span>
+            <span className="titulo-branco">✨Sobre a </span>
+            <span className="titulo-verde">EvoluSom✨</span>
           </h1>
+
+          <h2 className="sobre-subtitulo">
+            <span className="sobre-linhas-brancas">Mais de uma década com você</span>
+          </h2>
         </div>
 
         <div className="sobre-content">
@@ -72,13 +78,11 @@ const SobreSection = () => {
                   className="video-cover-image"
                 />
                 <div className="video-cover-content">
-                  <p className="video-cover-text">Saiba mais sobre a EvoluSom</p>
                   <button 
                     className="video-play-button"
                     onClick={handleAssistirVideo}
                   >
                     <PlayCircle size={24} />
-                    Assista o vídeo
                   </button>
                 </div>
               </div>
@@ -111,7 +115,7 @@ const SobreSection = () => {
               <div className="diferencial-card">
                 <Shield className="diferencial-icon" size={40} />
                 <h3>Garantia</h3>
-                <p>Produtos e serviços certificados com garantia </p>
+                <p>Produtos e serviços certificados com garantia</p>
               </div>
               <div className="diferencial-card">
                 <Award className="diferencial-icon" size={40} />
@@ -120,7 +124,7 @@ const SobreSection = () => {
               </div>
               <div className="diferencial-card">
                 <Users className="diferencial-icon" size={40} />
-                <h3>Atendimento Premium</h3>
+                <h3> Premium</h3>
                 <p>Equipe qualificada e atendimento personalizado</p>
               </div>
             </div>
