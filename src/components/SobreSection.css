@@ -1,6 +1,25 @@
 .sobre {
-  background: linear-gradient(180deg, #323030 0%, #050505 100%);
+  background-color: #010101;
+  /* background-image: url('/hero_background4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; */
+}
+
+/* Máscara escura do background */
+/* .sobre::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2); 
+  z-index: 0; 
+} */
+
+/* Garante que o conteúdo fique acima da máscara */
+.sobre > .container {
   position: relative;
+  z-index: 1;
 }
 
 .sobre-header {
@@ -253,6 +272,33 @@
   transform: translateY(-5px);
   box-shadow: 0 15px 50px rgba(36, 160, 67, 0.4);
 }
+
+/* Máscara escura */
+.video-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme quiser */
+  z-index: 1;
+}
+
+/* Garante que o conteúdo (botão play) apareça acima da máscara */
+.video-cover-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
 
 .video-cover-image {
   width: 100%;

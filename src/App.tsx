@@ -30,8 +30,7 @@ function App() {
         <Header />
         <main>
           <HeroSection />
-          <SobreSection />
-          <NavServicos />
+          <SobreSection />          
           <ServicosSection />
           <AvaliacaoSection />
           <ContatoSection />

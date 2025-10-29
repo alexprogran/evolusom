@@ -1,5 +1,6 @@
 import { Home, Shield, Music, Zap, Building2, Monitor, ShoppingBag, Plug, Volume2, Lightbulb } from 'lucide-react';
 import ServicoCard from './ServicoCard';
+import NavServicos from './NavServicos';
 import './ServicosSection.css';
 
 const ServicosSection = () => {
@@ -71,35 +72,36 @@ const ServicosSection = () => {
   return ( 
     <section id="servicos" className="servicos">
       <div className="container">
-        <div className="servicos-header">
-          <h2 className="section-title">Nossos Serviços</h2>
-          <div className="sobre-title-underline"></div>
-          <p className="servicos-subtitle">
-            Soluções completas para atender todas as suas necessidades
-          </p>
-        </div>
+        <NavServicos />
 
         {/* Exemplos de uso do ServicoCard */}
         <div className="servicos-cards-container">
           <ServicoCard
             titulo="Instalação de Película Premium"
             texto="Oferecemos um serviço de instalação de películas automotivas de alta qualidade, com acabamento impecável e proteção superior contra raios UV e calor. Nossas películas são certificadas e garantem durabilidade excepcional."
-            imagem="/img_evolusom_capa_video.webp"
+            imagem="/img_aplic_pelicula.png"
             video="/aplic_pelicula2.mp4"
-          />
+          /> 
           
           <ServicoCard
             titulo="Sistemas de Som Automotivo"
             texto="Recuperamos e instalamos sistemas de som com técnicas modernas que preservam a qualidade original do veículo, devolvendo potência sonora e clareza excepcionais para uma experiência musical única."
-            imagem="/img_evolusom_capa_video.webp"
+            imagem="/img_som_automotivo.webp"
             video="/install_som.mp4"
           />
           
           <ServicoCard
             titulo="Instalações Elétricas Especializadas"
             texto="Realizamos instalações elétricas automotivas com segurança e precisão, utilizando equipamentos de última geração e técnicas profissionais que garantem funcionamento perfeito e durabilidade."
-            imagem="/img_evolusom_capa_video.webp"
+            imagem="/img_eletricas.jpg"
             video="/install_eletric.mp4"
+          />
+
+          <ServicoCard
+            titulo="Lâmpadas Convencionais e Leds"
+              texto="Oferecemos a instalação de lâmpadas convencionais e leds de alta qualidade, com a melhor tecnologia disponível no mercado. Nossos serviços são realizados por profissionais experientes e com equipamentos de última geração."
+            imagem="/img_led_car.webp"
+            video="/product_led.mp4"
           />
         </div>
 

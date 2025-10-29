@@ -1,7 +1,11 @@
 .servicos {
-  background-color: var(--preto);
+  /* padding-top: 0; */
+  background-image: url('/hero_background4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
-}
+} 
 
 /* Container específico para servicos - permite largura maior que o container padrão */
 .servicos .container {

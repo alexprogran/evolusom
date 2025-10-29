@@ -59,8 +59,8 @@ const SobreSection = () => {
           </div>
 
           <h1 className="sobre-titulo">
-            <span className="titulo-branco">✨Sobre a </span>
-            <span className="titulo-verde">EvoluSom✨</span>
+            <span className="titulo-branco">Sobre a </span>
+            <span className="titulo-verde">EvoluSom</span>
           </h1>
 
           <h2 className="sobre-subtitulo">

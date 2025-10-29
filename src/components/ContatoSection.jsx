@@ -28,7 +28,6 @@ const ContatoSection = () => {
       <div className="container">
         <div className="contato-header">
           <h2 className="section-title">Entre em Contato</h2>
-          <div className="title-underline"></div>
           <p className="contato-subtitle">
             Estamos prontos para atender você !
           </p>
