@@ -1,7 +1,7 @@
 import { Home, Shield, Music, Zap, Building2, Monitor, ShoppingBag, Plug, Volume2, Lightbulb } from 'lucide-react';
-import './ServicosSection.css';
+import './NavServicos.css';
 
-const ServicosSection = () => {
+const NavServicos = () => {
   const abrirWhatsApp = (servico) => {
     const mensagem = `Olá! Gostaria de solicitar um orçamento para o serviço: ${servico}`;
     const url = `https://wa.me/557130405086?text=${encodeURIComponent(mensagem)}`;
@@ -68,27 +68,27 @@ const ServicosSection = () => {
   ];
 
   return ( 
-    <section id="servicos" className="servicos">
+    <section id="navservicos" className="navservicos">
       <div className="container">
-        <div className="servicos-header">
+        <div className="navservicos-header">
           <h2 className="section-title">Nossos Serviços</h2>
           <div className="sobre-title-underline"></div>
-          <p className="servicos-subtitle">
+          <p className="navservicos-subtitle">
             Soluções completas para atender todas as suas necessidades
           </p>
         </div>
 
-        {/* <div className="servicos-categoria">          
-          <div className="servicos-all-cards">
+        {/* <div className="navservicos-categoria">          
+          <div className="navservicos-all-cards">
             {servicosAutomotivos.map((servico, index) => (
-              <div key={index} className="servico-card">
-                <div className="servico-icon">{servico.icon}</div>
-                <h4 className="servico-titulo">{servico.titulo}</h4>
-                <p className="servico-descricao">{servico.descricao}</p>
+              <div key={index} className="navservico-card">
+                <div className="navservico-icon">{servico.icon}</div>
+                <h4 className="navservico-titulo">{servico.titulo}</h4>
+                <p className="navservico-descricao">{servico.descricao}</p>
                 {servico.video && (
-                  <div className="servico-video-container">                   
+                  <div className="navservico-video-container">                   
                     <video
-                      className="servico-video"
+                      className="navservico-video"
                       controls
                       muted
                       playsInline
@@ -100,7 +100,7 @@ const ServicosSection = () => {
                   </div>
                 )}
                 <button 
-                  className="servico-btn"
+                  className="navservico-btn"
                   onClick={() => abrirWhatsApp(servico.titulo)}
                 >
                   Faça seu orçamento
@@ -110,7 +110,7 @@ const ServicosSection = () => {
           </div>
         </div>
 
-        <div className="servicos-categoria">
+        <div className="navservicos-categoria">
           <div className="categoria-header">
             <div className="categoria-icons">
               <Home size={36} className="categoria-icon" />
@@ -118,14 +118,14 @@ const ServicosSection = () => {
             </div>
             <h3 className="categoria-titulo">Residencial / Empresarial</h3>
           </div>
-          <div className="servicos-all-cards">
+          <div className="navservicos-all-cards">
             {servicosResidencial.map((servico, index) => (
-              <div key={index} className="servico-card">
-                <div className="servico-icon">{servico.icon}</div>
-                <h4 className="servico-titulo">{servico.titulo}</h4>
-                <p className="servico-descricao">{servico.descricao}</p>
+              <div key={index} className="navservico-card">
+                <div className="navservico-icon">{servico.icon}</div>
+                <h4 className="navservico-titulo">{servico.titulo}</h4>
+                <p className="navservico-descricao">{servico.descricao}</p>
                 <button 
-                  className="servico-btn"
+                  className="navservico-btn"
                   onClick={() => abrirWhatsApp(servico.titulo)}
                 >
                   Faça seu orçamento
@@ -139,4 +139,4 @@ const ServicosSection = () => {
   );
 };
 
-export default ServicosSection;
+export default NavServicos;

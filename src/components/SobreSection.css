@@ -136,6 +136,7 @@
 
 /* Ajuste responsivo para telas grandes */
 @media (min-width: 1200px) {
+  
   .sobre-badge {
     top: -30px; /* Reduzido para diminuir distância */
     font-size: 1rem;
@@ -155,6 +156,10 @@
 
 /* Mobile ajustes */
 @media (max-width: 768px) {
+ .sobre{  
+  padding-top: 0;
+ }
+
   .sobre-badge {
     position: relative;
     top: 0;
@@ -264,7 +269,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -342,6 +347,7 @@
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     padding: 0;
+    margin-top: 0;
   }
   
   .sobre-video-mobile .video-cover {
@@ -355,5 +361,6 @@
     height: auto;
     object-fit: cover;
     border-radius: 0;
+    margin-top: 0;
   }
 }

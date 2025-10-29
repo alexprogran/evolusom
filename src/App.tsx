@@ -2,6 +2,7 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import SobreSection from './components/SobreSection';
+import NavServicos from './components/NavServicos';
 import ServicosSection from './components/ServicosSection';
 import AvaliacaoSection from './components/AvaliacaoSection';
 import ContatoSection from './components/ContatoSection';
@@ -30,6 +31,7 @@ function App() {
         <main>
           <HeroSection />
           <SobreSection />
+          <NavServicos />
           <ServicosSection />
           <AvaliacaoSection />
           <ContatoSection />

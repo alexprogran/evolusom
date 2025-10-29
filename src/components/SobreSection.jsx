@@ -64,7 +64,7 @@ const SobreSection = () => {
           </h1>
 
           <h2 className="sobre-subtitulo">
-            <span className="sobre-linhas-brancas">Mais de uma década com você</span>
+            <span className="sobre-linhas-brancas">Mais de uma década com você!</span>
           </h2>
         </div>
 
@@ -124,7 +124,7 @@ const SobreSection = () => {
               </div>
               <div className="diferencial-card">
                 <Users className="diferencial-icon" size={40} />
-                <h3> Premium</h3>
+                <h3> Satisfação</h3>
                 <p>Equipe qualificada e atendimento personalizado</p>
               </div>
             </div>
