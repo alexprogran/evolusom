@@ -5,11 +5,33 @@ const ServicoCard = ({ titulo, texto, imagem, video }) => {
   const [mostrarVideo, setMostrarVideo] = useState(false);
   const videoRef = useRef(null);
 
-  const handleSaibaMais = () => setMostrarVideo(true);
+  const abrirWhatsApp = () => {
+    const mensagem = `Olá! Gostaria de solicitar um orçamento para o serviço: ${titulo}`;
+    const url = `https://wa.me/557130405086?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  };
+
+  const handleSaibaMais = () => {
+    if (!video) {
+      abrirWhatsApp();
+      return;
+    }
+    setMostrarVideo(true);
+  };
   const handleVideoEnd = () => setMostrarVideo(false);
+  const handleVideoPlay = () => {
+    const allVideos = document.querySelectorAll('video');
+    allVideos.forEach((vid) => {
+      if (vid !== videoRef.current) {
+        vid.pause();
+      }
+    });
+  };
 
   useEffect(() => {
     if (mostrarVideo && videoRef.current) {
+      videoRef.current.muted = false;
+      videoRef.current.volume = 1.0;
       videoRef.current.play();
     }
   }, [mostrarVideo]);
@@ -27,9 +49,10 @@ const ServicoCard = ({ titulo, texto, imagem, video }) => {
               ref={videoRef}
               className="servico-video"
               onEnded={handleVideoEnd}
+              onPlay={handleVideoPlay}
               controls
-              muted
               playsInline
+              autoPlay
             >
               <source src={video} type="video/mp4" />
               Seu navegador não suporta o elemento de vídeo.

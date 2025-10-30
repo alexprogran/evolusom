@@ -7,9 +7,14 @@
   position: relative;
 } 
 
-/* Container específico para servicos - permite largura maior que o container padrão */
+/* Container específico para servicos - ocupar 100% da largura sem sobras */
 .servicos .container {
-  max-width: 1500px; /* Maior que o container padrão (1200px) para acomodar cards de 1400px */
+  width: 100%;
+  max-width: none; /* sem limite para ocupar toda a largura */
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .servicos-header { 

@@ -48,9 +48,14 @@ section .servico-card,
 .servico-video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   transition: opacity 0.5s ease;
   border-radius: 12px;
+}
+
+/* Garantir que os controles do vídeo não sejam cortados */
+.servico-video {
+  object-fit: contain; /* evita que a barra de controles fique fora da área visível */
+  background-color: #000;
 }
 
 /* Texto - segunda coluna (meio) */

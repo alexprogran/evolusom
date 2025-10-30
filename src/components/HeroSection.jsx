@@ -12,24 +12,24 @@ const HeroSection = () => {
 
   const cardsApresentacao = [
     {
-      imagem: '/img_aplic_pelicula.png',
-      titulo: 'Aplicação de Película de Proteção'
+      imagem: '/img_aplic_pelicula1.jpg',
+      titulo: 'Película de Proteção'
     },
     {
       imagem: '/img_led_car.webp',
-      titulo: 'Lâmpadas convencionais e leds'
+      titulo: 'Lâmpadas de Led'
     },
     {
       imagem: '/img_multimidia.webp',
-      titulo: 'Instalação Multimídia'
+      titulo: ' Multimídias'
     },
     {
       imagem: '/img_som_automotivo.webp',
-      titulo: 'Instalação de Som Automotivo'
+      titulo: 'Som Automotivo'
     },
     {
       imagem: '/img_eletricas.jpg',
-      titulo: 'Instalação de Elétrica'
+      titulo: 'Elétrica'
     },
   ];
 

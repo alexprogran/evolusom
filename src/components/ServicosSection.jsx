@@ -79,8 +79,14 @@ const ServicosSection = () => {
           <ServicoCard
             titulo="Instalação de Película Premium"
             texto="Oferecemos um serviço de instalação de películas automotivas de alta qualidade, com acabamento impecável e proteção superior contra raios UV e calor. Nossas películas são certificadas e garantem durabilidade excepcional."
-            imagem="/img_aplic_pelicula.png"
+            imagem="/img_aplic_pelicula1.jpg"
             video="/aplic_pelicula2.mp4"
+          /> 
+          <ServicoCard
+            titulo="Instalação de Multimídia"
+            texto="Instalação de multimídia de alta qualidade, com acabamento impecável e integração perfeita ao seu veículo. Trabalhamos com equipamentos modernos, garantindo conectividade avançada e uma experiência completa de entretenimento e tecnologia."
+            imagem="/img_multimidia.webp"
+            video="/antes_depois_multimidia1.mp4"
           /> 
           
           <ServicoCard
@@ -91,10 +97,10 @@ const ServicosSection = () => {
           />
           
           <ServicoCard
-            titulo="Instalações Elétricas Especializadas"
+            titulo="Elétrica"
             texto="Realizamos instalações elétricas automotivas com segurança e precisão, utilizando equipamentos de última geração e técnicas profissionais que garantem funcionamento perfeito e durabilidade."
             imagem="/img_eletricas.jpg"
-            video="/install_eletric.mp4"
+            video=""
           />
 
           <ServicoCard
@@ -102,6 +108,12 @@ const ServicosSection = () => {
               texto="Oferecemos a instalação de lâmpadas convencionais e leds de alta qualidade, com a melhor tecnologia disponível no mercado. Nossos serviços são realizados por profissionais experientes e com equipamentos de última geração."
             imagem="/img_led_car.webp"
             video="/product_led.mp4"
+          />
+          <ServicoCard
+            titulo="Vidros Elétricos e Alarmes"
+              texto="Instalação de vidros elétricos e alarmes, com a melhor tecnologia disponível no mercado. Nossos serviços são realizados por profissionais experientes e com equipamentos de última geração."
+            imagem="/img_alarme_vidros.avif"
+            video="/install_eletric.mp4"
           />
         </div>
 

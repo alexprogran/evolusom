@@ -115,7 +115,7 @@ const SobreSection = () => {
               <div className="diferencial-card">
                 <Shield className="diferencial-icon" size={40} />
                 <h3>Garantia</h3>
-                <p>Produtos e serviços certificados com garantia</p>
+                <p>Produtos e serviços certificados</p>
               </div>
               <div className="diferencial-card">
                 <Award className="diferencial-icon" size={40} />

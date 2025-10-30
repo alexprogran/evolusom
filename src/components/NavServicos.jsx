@@ -6,7 +6,7 @@ const NavServicos = () => {
       <div className="nav-servicos-content">
         <h1 className="nav-servicos-title">NOSSOS SERVIÇOS</h1>
         <p className="nav-servicos-subtitle">
-        Soluções completas em películas, leds, multimídia, som e elétrica tudo em um só lugar</p>
+        Soluções completas em películas, leds, multimídia, som, elétrica e acessórios tudo em um só lugar!</p>
         <div className="nav-servicos-line">
           <span className="nav-servicos-line-segment line-brown"></span>
           <span className="nav-servicos-line-segment line-yellow"></span>
