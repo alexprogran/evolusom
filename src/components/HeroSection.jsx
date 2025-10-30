@@ -11,7 +11,7 @@ const HeroSection = () => {
   };
 
   const cardsApresentacao = [
-    {
+    { 
       imagem: '/img_aplic_pelicula1.jpg',
       titulo: 'Película de Proteção'
     },
@@ -67,7 +67,7 @@ const HeroSection = () => {
               para o seu carro, casa ou empresa
             </h2>
             <p className="hero-description">
-              Soluções em películas, multimídias, som, elétrica e acessórios
+              Soluções completas em películas para vidros residenciais, automotivas, multimídias, som, elétrica e acessório, tudo <br /> em um só lugar!
             </p>
             <div className="hero-buttons">
               <button onClick={scrollParaServicos} className="hero-btn">

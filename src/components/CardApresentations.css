@@ -126,6 +126,20 @@
   }
 }
 
+/* Desktop (≥1200px): ajustar altura do carrossel */
+@media (min-width: 1200px) {
+  .carousel-container {
+    height: 360px; /* ajuste aqui a altura desejada no desktop */
+  }
+}
+
+/* Ultra-wide (≥1600px): carrossel um pouco maior */
+@media (min-width: 1600px) {
+  .carousel-container {
+    height: 600px; /* ajuste aqui para telas muito grandes */
+  }
+}
+
 @media (max-width: 1000px) {
   .carousel-container {
     --card-title-size: 1.5rem;
@@ -150,10 +164,12 @@
 @media (max-width: 764px) {
   .carousel-container {
     --card-title-size: 1.5rem;
-   
-    width: 90%;
-    height: 50vh;
-    margin: 30px auto;
+    width: 100%;
+    max-width: 100%;
+    height: 48vh; /* controla altura no mobile padrão */
+    min-height: 280px;
+    max-height: 520px;
+    margin: 20px auto;
   }
 
   .card-title {
@@ -190,8 +206,10 @@
     position: relative;
     width: 100%;
     max-width: 100%;
-    height: 50vh;
-    margin-top: 2rem;
+    height: 40vh; /* altura um pouco menor em telas muito pequenas */
+    min-height: 240px;
+    max-height: 480px;
+    margin-top: 1.5rem;
     border-radius: 0;
     z-index: 1;
   }
