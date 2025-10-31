@@ -69,6 +69,9 @@ const HeroSection = () => {
             <p className="hero-description">
               Soluções completas em películas para vidros residenciais, automotivas, multimídias, som, elétrica e acessório, tudo <br /> em um só lugar!
             </p>
+            {/* <p className="hero-description-mobile">
+            Solução completa, tudo em um só lugar!
+            </p> */}
             <div className="hero-buttons">
               <button onClick={scrollParaServicos} className="hero-btn">
                 Conheça nossos serviços

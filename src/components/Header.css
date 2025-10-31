@@ -521,3 +521,74 @@
     display: none;
   }
 }
+
+/* Regras específicas para telas de até 450px */
+@media (max-width: 450px) {
+  /* Container de ícones mobile - dimensionado para telas pequenas */
+  .header-mobile-icons {
+    position: absolute;
+    top: -1.5rem;
+    right: 0.5rem;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  /* Botões de ícone mobile - tamanho reduzido para telas pequenas */
+  .header-mobile-icon-button {
+    color: var(--branco);
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .header-mobile-icon-button:hover {
+    color: var(--verde-evolusom);
+    background: rgba(36, 160, 67, 0.15);
+    transform: scale(1.05);
+  }
+
+  /* Tamanho dos ícones dentro dos botões */
+  .header-mobile-icon-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Botão de menu mobile - tamanho reduzido */
+  .header-mobile-menu-button {
+    color: var(--branco);
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .header-mobile-menu-button:hover {
+    color: var(--verde-evolusom);
+    background: rgba(36, 160, 67, 0.15);
+    transform: scale(1.05);
+  }
+
+  /* Tamanho do ícone do menu */
+  .header-mobile-menu-button svg {
+    width: 22px;
+    height: 22px;
+  }
+}
