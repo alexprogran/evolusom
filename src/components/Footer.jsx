@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="footer-coluna">
             <img src={logo} alt="EvoluSom Equipadora" className="footer-logo" />
             <p className="footer-descricao">
-             Estamos esperando por você !
+             Esperamos por você
             </p>
             <div className="footer-social">
               <a
